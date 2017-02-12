@@ -24,6 +24,19 @@
     <div class="wrap">
       <div class="container header">
         <a class="logo" href="/"></a>
+        <ul class="lang-switcher">
+          {% if site.data.settings.language == 'en' %}
+          <li class="lang-switcher__i">
+            <a href="{{ page.url | prepend: '/es'}} " class="lang-switcher__a">ES</a>
+          </li>
+          {% endif %}
+
+          {% if site.data.settings.language == 'es' %}
+          <li class="lang-switcher__i">
+            <a href="{{ page.url | remove: 'es/' }}" class="lang-switcher__a">EN</a>
+          </li>
+          {% endif %}
+        </ul>
       </div>
       <div class="container">
         <div class="container__body">

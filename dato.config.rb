@@ -26,7 +26,6 @@ create_post "src/index.md" do
     intro: dato.home.intro_text,
     layout: 'home',
   }
-  content 'Fooooo!'
 end
 
 # # Create a markdown file from the content of the `about_page` item type
