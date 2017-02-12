@@ -12,7 +12,7 @@
     "start:jekyll": "bundle exec jekyll server --incremental",
     "start:livereload": "livereload public -p 5678 -d",
     "start:datocms": "dato dump",
-    "start": "concurrently -p \"[{name}]\" -c \"blue,red,green,yellow\" -k -n jekyll,webpack,livereload,datocms \"npm run start:jekyll\" \"npm run start:assets\" \"npm run start:livereload\""
+    "start": "concurrently -p \"[{name}]\" -c \"blue,green\" -k -n jekyll,webpack \"npm run start:jekyll\" \"npm run start:assets\""
   },
   "dependencies": {
     "imagesloaded": "^4.1.1",

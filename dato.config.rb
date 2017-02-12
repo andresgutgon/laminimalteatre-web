@@ -14,7 +14,6 @@ create_data_file "src/_data/settings.yml", :yaml,
   name: dato.site.global_seo.site_name,
   language: dato.site.locales.first,
   intro: dato.home.intro_text,
-  copyright: dato.home.copyright,
   social_profiles: social_profiles,
   favicon_meta_tags: dato.site.favicon_meta_tags
 
@@ -24,8 +23,12 @@ create_data_file "src/_data/settings.yml", :yaml,
 create_post "src/index.md" do
   frontmatter :yaml, {
     seo_meta_tags: dato.home.seo_meta_tags,
+    image: dato.home.home_image,
+    cover: dato.home.home_image.url(w: 800, fm: 'jpg', auto: 'compress'),
+    lol: 'LOL',
     layout: 'home',
   }
+  content 'Fooooo!'
 end
 
 # # Create a markdown file from the content of the `about_page` item type

@@ -15,7 +15,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /.*\.sass$/,
+        test: /.*\.scss$/,
         loaders: ['style', 'css', 'sass', 'import-glob']
       },
       {
@@ -34,7 +34,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    port: 3000,
+    port: 4000,
     inline: true,
     stats: 'minimal'
   },

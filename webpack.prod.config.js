@@ -17,7 +17,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /.*\.sass$/,
+        test: /.*\.scss$/,
         loader: extractSass.extract(['css', 'sass', 'import-glob'])
       },
       {
