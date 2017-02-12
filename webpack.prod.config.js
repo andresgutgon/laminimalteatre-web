@@ -25,6 +25,10 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: 'babel-loader',
         query: { presets: ['es2015'] }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: "file-loader?name=/public/[name]-[hash].[ext]"
       }
     ]
   },

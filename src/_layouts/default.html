@@ -21,14 +21,20 @@
 
   </head>
   <body>
-    <div class="container">
-      <div class="container__body">
-        {{ content }}
+    <div class="wrap">
+      <div class="container header">
+        <a class="logo" href="/"></a>
       </div>
+      <div class="container">
+        <div class="container__body">
+          {{ content }}
+        </div>
 
-      <!-- {% for profile in site.data.settings.social_profiles %} -->
-      <!-- <a href="{{ profile.url }}" class="social social--{{ profile.type }}"></a> -->
-      <!-- {% endfor %} -->
+        <!-- {% for profile in site.data.settings.social_profiles %} -->
+        <!-- <a href="{{ profile.url }}" class="social social--{{ profile.type }}"></a> -->
+        <!-- {% endfor %} -->
+      </div>
     </div>
+    <script src="/assets/all.js"></script>
   </body>
 </html>

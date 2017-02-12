@@ -10,7 +10,6 @@
     "build": "npm run build:datocms && npm run build:jekyll && npm run build:assets",
     "start:assets": "NODE_ENV=development webpack --watch --config webpack.dev.config.js",
     "start:jekyll": "bundle exec jekyll server --incremental",
-    "start:livereload": "livereload public -p 5678 -d",
     "start:datocms": "dato dump",
     "start": "concurrently -p \"[{name}]\" -c \"blue,green\" -k -n jekyll,webpack \"npm run start:jekyll\" \"npm run start:assets\""
   },
@@ -27,6 +26,7 @@
     "concurrently": "^3.1.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.10.0",
     "import-glob-loader": "^1.1.0",
     "livereload": "^0.6.0",
     "node-sass": "^3.13.0",
