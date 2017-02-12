@@ -6,3 +6,5 @@ src/_works
 src/about.md
 src/index.md
 public
+
+node_modules
