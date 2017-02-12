@@ -22,38 +22,13 @@
   </head>
   <body>
     <div class="container">
-      <div class="container__sidebar">
-        <div class="sidebar">
-          <h6 class="sidebar__title">
-            <a href="/index.html">{{ site.data.settings.name }}</a>
-          </h6>
-
-          <div class="sidebar__intro">
-            {{ site.data.settings.intro | markdownify }}
-          </div>
-
-          <ul class="sidebar__menu">
-            <li{% if page.url == "/"%} class="is-active"{% endif %}>
-              <a href="/">Home</a>
-            </li>
-          </ul>
-
-          <p class="sidebar__social">
-            {% for profile in site.data.settings.social_profiles %}
-              <a href="{{ profile.url }}" class="social social--{{ profile.type }}"></a>
-            {% endfor %}
-          </p>
-
-          <div class="sidebar__copyright">
-            {{ site.data.settings.copyright }}
-          </div>
-        </div>
-      </div>
       <div class="container__body">
         {{ content }}
       </div>
-    </div>
 
-    <script src="/assets/all.js"></script>
+      <!-- {% for profile in site.data.settings.social_profiles %} -->
+      <!-- <a href="{{ profile.url }}" class="social social--{{ profile.type }}"></a> -->
+      <!-- {% endfor %} -->
+    </div>
   </body>
 </html>
