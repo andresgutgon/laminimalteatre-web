@@ -36,9 +36,6 @@
             <li{% if page.url == "/"%} class="is-active"{% endif %}>
               <a href="/">Home</a>
             </li>
-            <li{% if page.url == "/about.html"%} class="is-active"{% endif %}>
-              <a href="/about.html">About</a>
-            </li>
           </ul>
 
           <p class="sidebar__social">
@@ -53,18 +50,6 @@
         </div>
       </div>
       <div class="container__body">
-        <div class="container__mobile-header">
-          <div class="mobile-header">
-            <div class="mobile-header__menu">
-              <a href="#" data-js="toggleSidebar"></a>
-            </div>
-            <div class="mobile-header__logo">
-              <a href="/index.html">
-                {{ site.data.settings.name }}
-              </a>
-            </div>
-          </div>
-        </div>
         {{ content }}
       </div>
     </div>
