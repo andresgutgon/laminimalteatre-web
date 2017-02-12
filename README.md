@@ -8,11 +8,13 @@ First, install the dependencies of this project:
 
 ```
 yarn install
+bundle install
 ```
 
 Then, to run this website in development mode (with live-reload):
 
 ```
+bundle exec dato dump --TOKE=READ_TOKEN_GET_FROM_DATOCMS_ADMIN_PANEL
 yarn start
 ```
 

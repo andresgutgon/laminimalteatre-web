@@ -4,17 +4,21 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     {% if jekyll.environment == "production" %}
       <link rel="stylesheet" href="/assets/all.css">
     {% endif %}
+
     {% for tag in site.data.settings.favicon_meta_tags %}
       {{ tag | tagify }}
     {% endfor %}
+
     {% if page.seo_meta_tags %}
       {% for tag in page.seo_meta_tags %}
         {{ tag | tagify }}
       {% endfor %}
     {% endif %}
+
   </head>
   <body>
     <div class="container">
@@ -66,8 +70,10 @@
     </div>
 
     <script src="/assets/all.js"></script>
+
     {% if jekyll.environment == "development" %}
       <script src="http://localhost:5678/livereload.js"></script>
     {% endif %}
+
   </body>
 </html>
