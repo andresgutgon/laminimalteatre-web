@@ -20,47 +20,12 @@ create_data_file "src/_data/settings.yml", :yaml,
 # type stored in DatoCMS
 # paginate: { collection: 'works', per_page: 5 }
 create_post "src/index.md" do
-  frontmatter :yaml, {
+  frontmatter(
+    :yaml,
+    language: 'en',
     seo_meta_tags: dato.home.seo_meta_tags,
     cover: dato.home.home_image.url(w: 800, fm: 'jpg', auto: 'compress'),
     intro: dato.home.intro_text,
-    layout: 'home',
-  }
+    layout: 'home'
+  )
 end
-
-# # Create a markdown file from the content of the `about_page` item type
-# create_post "src/about.md" do
-#   frontmatter :yaml, {
-#     title: dato.about_page.title,
-#     subtitle: dato.about_page.subtitle,
-#     photo: dato.about_page.photo.url(w: 800, fm: 'jpg', auto: 'compress'),
-#     layout: 'about',
-#     seo_meta_tags: dato.about_page.seo_meta_tags,
-#   }
-
-#   content dato.about_page.bio
-# end
-
-# Create a `_works` directory (or empty it if already exists)...
-# directory "src/_works" do
-#   # ...and for each of the works stored online...
-#   dato.works.each_with_index do |work, index|
-#     # ...create a markdown file with all the metadata in the frontmatter
-#     create_post "#{work.slug}.md" do
-#       frontmatter :yaml, {
-#         layout: 'work',
-#         title: work.title,
-#         cover_image: work.cover_image.url(w: 450, fm: 'jpg', auto: 'compress'),
-#         detail_image: work.cover_image.url(w: 600, fm: 'jpg', auto: 'compress'),
-#         position: index,
-#         excerpt: work.excerpt,
-#         seo_meta_tags: work.seo_meta_tags,
-#         extra_images: work.gallery.map do |image|
-#           image.url(h: 300, fm: 'jpg', auto: 'compress')
-#         end
-#       }
-
-#       content work.description
-#     end
-#   end
-# end
