@@ -2,4 +2,5 @@
 layout: home
 published: false
 ---
-Hola **que** tal
+Hola **que** tal ![test]({{site.baseurl}}/src/_content/dkv-basic.jpg)
+
