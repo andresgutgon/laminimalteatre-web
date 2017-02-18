@@ -1,0 +1,13 @@
+---
+layout: default
+language: es
+permalink: /
+---
+<script id="site-languages-json" type="application/json">
+  {% raw %}{{% endraw %}
+  {% for language in site.languages %}
+  "{{ language }}": "{{ site.baseurl }}/{{ language }}/"
+  {% if forloop.last != true %},{% endif %}
+  {% endfor %}
+  {% raw %}}{% endraw %}
+</script>

@@ -1,0 +1,17 @@
+---
+layout: default
+languages:
+- es
+- ca
+- en
+---
+{% include header.html %}
+
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    {% tl 'en' %}
+    {{ content }}
+  </div>
+</main>
+
+{% include footer.html %}

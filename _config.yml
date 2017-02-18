@@ -10,7 +10,15 @@ destination: './build'
 
 markdown: kramdown
 
+# not used by plugin but by liquid template
+languages: ['es', 'ca', 'en']
+
+# Language plugin options
+language_data: data.lang.%%
+language_includes_dir: _i18n
+
 gems:
+- jekyll-language-plugin
 
 exclude:
   - Gemfile
