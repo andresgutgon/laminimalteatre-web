@@ -1,4 +1,5 @@
 ---
 layout: home
+published: true
 ---
-Hola
+Hola **que** tal
