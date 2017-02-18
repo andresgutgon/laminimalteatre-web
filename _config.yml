@@ -1,0 +1,17 @@
+title: 'La Minimal Teatre'
+email: 'info@laminimalteatre.com'
+description: '' 
+baseurl: "" 
+url: ""
+timezone: Europe/Madrid
+
+source: './src'
+destination: './build'
+
+markdown: kramdown
+
+gems:
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
