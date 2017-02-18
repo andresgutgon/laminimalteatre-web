@@ -1,4 +1,10 @@
 #!/bin/sh
 
+if [ "$1" != "nofetch" ]
+then
+  echo '==> Fetching from DatoCMS'
+  ruby script/datocms.rb
+fi
+
 echo '==> Serving the site...'
- JEKYLL_ENV=development bundle exec jekyll serve --incremental $@
+JEKYLL_ENV=development bundle exec jekyll serve --incremental $@
