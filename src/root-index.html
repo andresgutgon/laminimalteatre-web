@@ -1,8 +1,22 @@
 ---
 layout: default
-language: es
+languages:
+- es
+- ca
+- en
 permalink: /
 ---
+
+<ul>
+  {% for language in site.languages %}
+    <li>
+      <a href="{{ site.baseurl }}/{{ language }}/" title="{% tl language %}">
+        {% tl language %}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
 <script id="site-languages-json" type="application/json">
   {% raw %}{{% endraw %}
   {% for language in site.languages %}
