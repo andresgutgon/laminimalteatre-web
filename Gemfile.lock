@@ -107,7 +107,6 @@ PLATFORMS
 
 DEPENDENCIES
   dato
-  dotenv
   jekyll (= 3.3.1)
   jekyll-language-plugin
 

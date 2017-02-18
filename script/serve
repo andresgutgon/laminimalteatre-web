@@ -3,7 +3,7 @@
 if [ "$1" != "nofetch" ]
 then
   echo '==> Fetching from DatoCMS'
-  ruby script/datocms.rb
+  script/datocms
 fi
 
 echo '==> Serving the site...'
