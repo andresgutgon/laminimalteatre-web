@@ -19,7 +19,3 @@ language_includes_dir: _i18n
 
 gems:
 - jekyll-language-plugin
-
-exclude:
-  - Gemfile
-  - Gemfile.lock

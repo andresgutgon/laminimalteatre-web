@@ -2,3 +2,4 @@ build
 .DS_Store
 .jekyll-metadata
 .env
+.byebug_history
