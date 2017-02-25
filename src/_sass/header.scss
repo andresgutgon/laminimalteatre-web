@@ -1,0 +1,77 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header_height;
+  background-color: $grey1;
+
+  &__content {
+    height: $header_height;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .logo {
+    order: 5
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+
+    &__item {
+      @include font_size(1.4);
+      font-weight: 300;
+      color: rgba(white, .6);
+      display: block;
+      height: $header_height;
+      line-height: $header_height;
+      padding: 0 1rem;
+      text-decoration: none;
+      position: relative;
+      &:after {
+        display: none;
+        background-color: $brand;
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: .3rem;
+      }
+
+      &:hover {
+        background-color: rgba(white, .1);
+      }
+
+      &--active {
+        background-color: darken($grey1, 10%);
+        &:after {
+          display: block;
+        }
+      }
+    }
+
+    &--left {
+      order: 1;
+    }
+
+    &--right {
+      order: 3;
+    }
+  }
+
+
+}
+
+.logo {
+  svg {
+    fill: $brand;
+    height: 2.6rem;
+    width: 15rem;
+    margin: 0 2rem;
+  }
+}

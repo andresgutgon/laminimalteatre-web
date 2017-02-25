@@ -9,6 +9,7 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     blankslate (2.1.2.4)
+    byebug (9.0.6)
     cacert (0.3.0)
     colorator (1.1.0)
     concurrent-ruby (1.0.4)
@@ -106,6 +107,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   dato
   jekyll (= 3.3.1)
   jekyll-language-plugin

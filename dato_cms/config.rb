@@ -1,4 +1,5 @@
 require 'byebug'
+
 # dato.available_locales.each do |locale|
 #   directory 'content/#{locale}' do
 #     I18n.with_locale(locale) do
@@ -12,16 +13,17 @@ require 'byebug'
 # end
 
 I18n.available_locales.each do |locale|
-  directory "src/_content/_teams/#{locale}" do
-    I18n.with_locale(locale) do
-      dato.teams.each do |team|
-        create_post "#{team.slug}.md" do
+  dato.teams.each do |team|
+    directory "src/teams/#{locale.to_s}/#{team.slug}" do
+      I18n.with_locale(locale) do
+        create_post 'index.md' do
           frontmatter(
             :yaml,
-            layout: 'team',
+            layout: 'page',
             name: team.name,
             languages: I18n.available_locales,
-            language: locale
+            language: locale,
+            permalink: "teams/#{locale.to_s}/#{team.slug}"
           )
         end
       end

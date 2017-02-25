@@ -1,20 +1,19 @@
-<header class="site-header" role="banner">
-
-  <div class="wrapper">
-
-    <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
-
-    <nav class="site-nav">
-
-      <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-          {% endif %}
-        {% endfor %}
+<header class="header" role="banner">
+  <div class="container">
+    <div class="header__content">
+      <div class="logo">
+        {% include logo.html %}
       </div>
-    </nav>
-
+      <ul class="header__nav header__nav--left">
+        <li><a class="header__nav__item" href="#">El equipo</a></li>
+        <li><a class="header__nav__item" href="#">La compania</a></li>
+        <li><a class="header__nav__item" href="#">Espectaculos</a></li>
+      </ul>
+      <ul class="header__nav header__nav--right">
+        <li><a class="header__nav__item header__nav__item--active" href="#">Cursos</a></li>
+        <li><a class="header__nav__item" href="#">Galeria</a></li>
+        <li><a class="header__nav__item" href="#">Blog</a></li>
+      </ul>
+    </div>
   </div>
-
 </header>

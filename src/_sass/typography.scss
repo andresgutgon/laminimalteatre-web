@@ -1,0 +1,47 @@
+/**
+ * Typography
+ * Our base font size is 62.5% of 16px Which is 10px
+ * that means that 10px = 1.0rem. This way calculations are easier
+ * Reference: https://gregrickaby.com/2013/05/using-the-golden-ratio-and-rems/
+ */
+$rembase: 10;
+$fontbase: 16;
+$line_height: 26;
+
+@mixin font_size($font_size) {
+  $font: $font_size * $rembase;
+  font-size: #{$font_size}rem;
+  line-height: $line_height / $font;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include font_size(1.6);
+  font-family: 'Open Sans', sans-serif;
+  color: $grey1;
+}
+
+h1, h2 {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1,
+h2 {
+  @include font_size(2.6);
+}
+
+h3, h4 {
+  @include font_size(1.8);
+  font-weight: 300;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
