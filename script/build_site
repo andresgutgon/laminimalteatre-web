@@ -1,0 +1,2 @@
+echo '==> Building the site...'
+JEKYLL_ENV=producttion bundle exec jekyll build
