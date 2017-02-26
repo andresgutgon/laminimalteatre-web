@@ -12,6 +12,7 @@ require 'byebug'
 #   end
 # end
 
+
 I18n.available_locales.each do |locale|
   languages = I18n.available_locales.map { |l| l.to_s }
 
@@ -23,7 +24,7 @@ I18n.available_locales.each do |locale|
           layout: 'home',
           languages: languages,
           current_locale: locale.to_s,
-          image_url: dato.home.home_image.file.width(400).to_url,
+          image_url: dato.home.home_image.file.width(800).to_url,
           intro_text: dato.home.intro_text,
           permalink: "#{locale}/"
         )
@@ -40,7 +41,7 @@ I18n.available_locales.each do |locale|
             layout: 'page',
             name: team.name,
             languages: languages,
-            language: locale.to_s,
+            current_locale: locale.to_s,
             permalink: "#{locale.to_s}/teams/#{team.slug}"
           )
         end

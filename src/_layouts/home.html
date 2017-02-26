@@ -4,12 +4,20 @@ subset: 'home'
 section: 'home'
 ---
 {{ page.section }}
-<div class="home_splash">
-  <img src="{{ page.image_url }}" />
+<div class="home_splash" style="background-image: url('{{ page.image_url }}')">
+  <div class="home_splash__content">
+    <h1>Teatre sistemic</h1>
+  </div>
 </div>
-{{ page.intro_text | markdownify  }}
-<h1>Title</h1>
-<h3>Subtitle</h3>
-
-
-{{ content }}
+<div class="container" id="team">
+  <div class="block story">
+    <h2 class="story__title">El equipo</h2>
+    <div class="story__content">{{ page.intro_text | markdownify  }}</div>
+  </div>
+</div>
+<div class="container" id="story">
+  <div class="block story">
+    <h2 class="story__title">Nuestra historia</h2>
+    <div class="story__content">{{ page.intro_text | markdownify  }}</div>
+  </div>
+</div>

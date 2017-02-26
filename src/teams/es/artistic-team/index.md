@@ -5,7 +5,7 @@ languages:
 - en
 - es
 - ca
-language: es
+current_locale: es
 permalink: es/teams/equipo-artistico
 ---
 

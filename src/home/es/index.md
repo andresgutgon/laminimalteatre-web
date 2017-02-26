@@ -5,7 +5,7 @@ languages:
 - es
 - ca
 current_locale: es
-image_url: https://dato-images.imgix.net/1035/1486922377-espe-jpg?ch=DPR%2CWidth&auto=format&w=400
+image_url: https://dato-images.imgix.net/1035/1488117035-14188245_1177122615695217_4078761031820233976_o-jpg?ch=DPR%2CWidth&auto=format&w=800
 intro_text: |-
   El octubre de 2010 se aglutina por primera vez el equipo de LAminimAL Teatre Sistèmic, de la mano de Daniela De Vecchi en calidad de grupo de investigación teatral en residencia en la Sala Beckett. Desde entonces hasta junio de 2011, LAminimAL realiza laboratorios mensuales en el Obrador Internacional de Dramaturgia de la Sala Beckett que culminan con sesiones abiertas, mediante las cuales se ha podido contrastar con el público asistente el proceso de desarrollo de la poética del grupo.
 

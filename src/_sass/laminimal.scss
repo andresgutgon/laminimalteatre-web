@@ -11,6 +11,9 @@
 @import "layout";
 @import "header";
 
-body {
-  // background-color: $brand;
+@import "home";
+
+.content {
+  padding-top: $header_height;
 }
+

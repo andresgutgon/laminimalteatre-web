@@ -5,7 +5,7 @@ languages:
 - en
 - es
 - ca
-language: ca
+current_locale: ca
 permalink: ca/teams/equip-artistic
 ---
 

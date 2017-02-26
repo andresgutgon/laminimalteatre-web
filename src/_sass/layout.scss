@@ -1,5 +1,12 @@
 .container {
   margin: 0 auto;
-  max-width: 120rem;
-  padding: 0 1.5rem;
+  max-width: 95rem;
+  padding: 0 2.5rem;
+}
+
+.block {
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
+  margin-bottom: 4.8rem;
+  border-bottom: 1px solid $grey5;
 }

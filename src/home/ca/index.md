@@ -5,7 +5,7 @@ languages:
 - es
 - ca
 current_locale: ca
-image_url: https://dato-images.imgix.net/1035/1486922377-espe-jpg?ch=DPR%2CWidth&auto=format&w=400
+image_url: https://dato-images.imgix.net/1035/1488117035-14188245_1177122615695217_4078761031820233976_o-jpg?ch=DPR%2CWidth&auto=format&w=800
 intro_text: |-
   L’octubre de 2010 es reuneix per primer cop l’equip de LAminimAL Teatre, de la mà de Daniela De Vecchi, en qualitat de grup d’investigació amb residència a la Sala Beckett. Des de llavors i fins el juny de 2011 LAminimAL realitza laboratoris mensuals a l’Obrador Internacional de Dramatúrgia que culminen amb sessions obertes – una després de cada etapa de treball-, mitjançant les que es pogué contrastar amb el públic assistent el procés de desenvolupament de la poètica del grup.
 

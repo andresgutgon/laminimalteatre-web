@@ -5,7 +5,7 @@ languages:
 - es
 - ca
 current_locale: en
-image_url: https://dato-images.imgix.net/1035/1486922377-espe-jpg?ch=DPR%2CWidth&auto=format&w=400
+image_url: https://dato-images.imgix.net/1035/1488117035-14188245_1177122615695217_4078761031820233976_o-jpg?ch=DPR%2CWidth&auto=format&w=800
 intro_text: |-
   In October 2010, the workteam of LAminimAL Teatre Sistèmic met for the fist time, under the direction of Daniela De Vecchi, as a theatre researching group in residency at Sala Beckett.
 
