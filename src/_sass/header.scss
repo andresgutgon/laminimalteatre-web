@@ -1,22 +1,20 @@
+$header_height: 3rem;
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: $header_height;
-  background-color: $grey1;
+  background-color: $brand;
+  box-shadow: 0 0 3px 0px rgba(0, 0, 0, .4);
 
   &__content {
-    height: $header_height;
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
   }
 
-  .logo {
-    order: 5
-  }
 
   &__nav {
     display: flex;
@@ -25,7 +23,7 @@
     &__item {
       @include font_size(1.4);
       font-weight: 300;
-      color: rgba(white, .6);
+      color: $grey1;
       display: block;
       height: $header_height;
       line-height: $header_height;
@@ -34,33 +32,35 @@
       position: relative;
       &:after {
         display: none;
-        background-color: $brand;
+        background-color: $grey1;
         content: "";
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 0;
-        height: .3rem;
+        bottom: -.1rem;
+        height: .2rem;
       }
 
       &:hover {
-        background-color: rgba(white, .1);
+        &:after {
+          background-color: darken($brand, 10%);
+        }
       }
 
+      &:hover,
       &--active {
-        background-color: darken($grey1, 10%);
         &:after {
           display: block;
         }
       }
-    }
 
-    &--left {
-      order: 1;
-    }
-
-    &--right {
-      order: 3;
+      &--active {
+        &:hover {
+          &:after {
+            background-color: $grey1;
+          }
+        }
+      }
     }
   }
 
@@ -68,9 +68,10 @@
 }
 
 .logo {
+  height: 5rem;
   svg {
-    fill: $brand;
-    height: 2.6rem;
+    fill: $grey1;
+    height: 5rem;
     width: 15rem;
     margin: 0 2rem;
   }
