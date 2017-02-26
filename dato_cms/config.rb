@@ -22,6 +22,7 @@ I18n.available_locales.each do |locale|
           languages: I18n.available_locales,
           language: locale,
           image_url: dato.home.home_image.file.width(400).to_url,
+          intro_text: dato.home.intro_text,
           permalink: "#{locale.to_s}/index"
         )
       end
