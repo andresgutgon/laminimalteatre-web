@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
   {% for language in page.languages %}
-    <link rel="alternate" hreflang="{{ language }}" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace_first: page.language, language }}" />
+    <link rel="alternate" hreflang="{{ language }}" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace_first: page.current_locale, language }}" />
   {% endfor %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 

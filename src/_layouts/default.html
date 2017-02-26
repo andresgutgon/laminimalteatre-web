@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html  lang="{{ page.language }}">
+<html  lang="{{ page.current_locale }}">
   {% include head.html %}
 
-  <body class="{{ page.section }}">
+  <body>
     {{ content }}
     <script src='{{ site.baseurl }}/assets/js/vendor/jquery.min.js'></script>
     <script src='{{ site.baseurl }}/assets/js/language-redirect.js'></script>

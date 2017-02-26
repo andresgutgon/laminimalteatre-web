@@ -7,7 +7,7 @@ section: 'home'
 <div class="home_splash">
   <img src="{{ page.image_url }}" />
 </div>
-{{ page.intro_text }}
+{{ page.intro_text | markdownify  }}
 <h1>Title</h1>
 <h3>Subtitle</h3>
 
