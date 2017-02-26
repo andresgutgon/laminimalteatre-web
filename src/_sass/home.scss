@@ -38,7 +38,7 @@
   flex-direction: row;
 
   &__title {
-    margin-right: 2rem;
+    margin: 0 2rem 0 0;
     min-width: 30rem;
     text-align: right;
   }
@@ -48,6 +48,53 @@
     position: relative;
     p {
       flex-basis: 100%;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.teams {
+  flex: 1 1 auto;
+}
+
+.team {
+  margin-bottom: 4rem;
+  width: 100%;
+  &__title {
+    margin: 0 0 3rem 0;
+    background-color: $brand;
+    border-radius: .2rem;
+    padding: .4rem;
+    text-align: center;
+  }
+
+  &__members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__member {
+    margin: 0 1rem 1rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__avatar {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 100rem;
+      border: .2rem solid $brand;
+    }
+
+    &__name {
+      @include font_size(1.6);
+      font-weight: 300;
+    }
+
+    &__role {
+      @include font_size(1.1);
     }
   }
 }

@@ -17,5 +17,10 @@ languages: ['es', 'ca', 'en']
 language_data: data.lang.%%
 language_includes_dir: _i18n
 
+collections:
+ - members
+ - teams
+
 gems:
-- jekyll-language-plugin
+  - jekyll-language-plugin
+  - octopress-debugger

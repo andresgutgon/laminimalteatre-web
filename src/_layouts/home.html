@@ -9,15 +9,37 @@ section: 'home'
     <h1>Teatre sistemic</h1>
   </div>
 </div>
-<div class="container" id="team">
-  <div class="block story">
-    <h2 class="story__title">El equipo</h2>
-    <div class="story__content">{{ page.intro_text | markdownify  }}</div>
-  </div>
-</div>
 <div class="container" id="story">
   <div class="block story">
     <h2 class="story__title">Nuestra historia</h2>
     <div class="story__content">{{ page.intro_text | markdownify  }}</div>
+  </div>
+</div>
+<div class="container" id="team">
+  <div class="block story">
+    <h2 class="story__title">El equipo</h2>
+    {% assign teams = site.teams | where:'locale', page.current_locale %}
+    <div class="teams">
+      {% assign classDirection = team.slug == 'direction' ? 'direction : nil %}
+      {% for team in teams %}
+        <div class="team {{ classDirection }}">
+          <h3 class="team__title">{{ team.name }}</h3>
+          <div class="team__members">
+            {% assign members = site.members | where:'team_db_id', team.db_id | where:'locale', page.current_locale %}
+            {% for member in members %}
+              <div class="team__member">
+                <img class="team__member__avatar" src="{{ member.avatar }}" alt="{{ member.full_name }}"/>
+                <div class="team__member__name">
+                  {{ member.full_name }}
+                </div>
+                <div class="team__member__role">
+                  {{ member.role }}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
