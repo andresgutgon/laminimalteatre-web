@@ -20,12 +20,12 @@ html {
 
 body {
   @include font_size(1.6);
-  font-family: 'Open Sans', sans-serif;
+  font-family: $sans;
   color: $grey1;
 }
 
-h1, h2 {
-  font-family: 'Roboto Slab', serif;
+h1, h2, blockquote {
+  font-family: $serif;
 }
 
 h1,

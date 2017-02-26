@@ -19,6 +19,8 @@ directory "src/_teams" do
         create_post "#{locale.to_s}_#{team.slug}.yaml" do
           frontmatter :yaml,
                       name: team.name,
+                      position: team.position,
+                      slug: team.slug,
                       locale: locale.to_s,
                       db_id: team.id
         end
@@ -40,6 +42,7 @@ directory "src/_members" do
                         locale: locale.to_s,
                         avatar: user.avatar.file.width(120).to_url,
                         role: member.role,
+                        position: member.position,
                         bio: user.bio
           end
         end

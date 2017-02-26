@@ -1,5 +1,7 @@
 ---
 name: Direcció
+position: 1
+slug: direction
 locale: ca
 db_id: '37487'
 ---

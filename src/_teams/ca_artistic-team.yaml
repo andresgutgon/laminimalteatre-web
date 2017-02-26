@@ -1,5 +1,7 @@
 ---
 name: Equip artistic
+position: 2
+slug: artistic-team
 locale: ca
 db_id: '35301'
 ---

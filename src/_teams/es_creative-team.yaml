@@ -1,5 +1,7 @@
 ---
 name: Equipo creativo
+position: 3
+slug: creative-team
 locale: es
 db_id: '37419'
 ---

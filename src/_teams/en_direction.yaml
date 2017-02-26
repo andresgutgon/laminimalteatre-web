@@ -1,5 +1,7 @@
 ---
 name: Direction
+position: 1
+slug: direction
 locale: en
 db_id: '37487'
 ---

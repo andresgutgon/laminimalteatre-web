@@ -5,8 +5,13 @@ section: 'home'
 ---
 {{ page.section }}
 <div class="home_splash" style="background-image: url('{{ page.image_url }}')">
-  <div class="home_splash__content">
-    <h1>Teatre sistemic</h1>
+  <div class="container home_splash__content">
+    <blockquote cite="http://www.aat.es/elkioscoteatral/las-puertas-del-drama/drama-43/entrevista-a-sanchis-sinisterra-compartir-el-no-saber-es-tan-bonito-y-estimulante-como-compartir-el-saber">
+      <p class="quotation">
+        La historia del Arte es la historia de experiencias artísticas que modifican el horizonte de expectativas.
+      </p>
+      <div class="quotation__footer">— José Sanchis Sinisterra</div>
+    </blockquote>
   </div>
 </div>
 <div class="container" id="story">
@@ -18,14 +23,13 @@ section: 'home'
 <div class="container" id="team">
   <div class="block story">
     <h2 class="story__title">El equipo</h2>
-    {% assign teams = site.teams | where:'locale', page.current_locale %}
+    {% assign teams = site.teams | where: 'locale', page.current_locale | sort: 'position' %}
     <div class="teams">
-      {% assign classDirection = team.slug == 'direction' ? 'direction : nil %}
       {% for team in teams %}
-        <div class="team {{ classDirection }}">
+        <div class="team">
           <h3 class="team__title">{{ team.name }}</h3>
           <div class="team__members">
-            {% assign members = site.members | where:'team_db_id', team.db_id | where:'locale', page.current_locale %}
+            {% assign members = site.members | where:'team_db_id', team.db_id | where:'locale', page.current_locale | sort: 'position' %}
             {% for member in members %}
               <div class="team__member">
                 <img class="team__member__avatar" src="{{ member.avatar }}" alt="{{ member.full_name }}"/>

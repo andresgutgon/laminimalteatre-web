@@ -1,13 +1,7 @@
 .home_splash {
-  height: 35rem;
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 3rem;
   &:after {
     content: "";
     position: absolute;
@@ -15,24 +9,60 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: $brand;
-    opacity: .5;
+    background-color: black;
+    opacity: .8;
   }
 
   &__content {
+    height: 50rem;
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 3rem;
   }
 
-  h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 6rem;
-    color: white;
-    text-shadow: 0 0 2rem darken($brand, 40%);
-    margin: 0;
+  .quotation {
+    color: rgba(white, .9);
+    font-size: 3rem;
+    line-height: 1.4;
+    quotes: "\201C""\201D""\2018""\2019";
+    padding: 1rem 2rem;
+
+    &:before {
+      font-size: 3em;
+      color: $brand;
+      content: open-quote;
+      display: inline;
+      height: 0;
+      line-height: 0;
+      left: - 1rem;
+      position: relative;
+      top: 3rem;
+    }
+
+    &:after {
+      font-size: 3em;
+      color: $brand;
+      content: close-quote;
+      display: inline;
+      height: 0;
+      line-height: 0;
+      left: 10px;
+      position: relative;
+      top: 35px;
+    }
+
+    &__footer {
+      @include font_size(1.5);
+      color: rgba(white, .7);
+      margin:0;
+      text-align: right;
+    }
   }
 }
+
 .story {
   display: flex;
   flex-direction: row;
@@ -73,11 +103,12 @@
   &__members {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__member {
-    margin: 0 1rem 1rem 0;
+    margin-bottom: 1rem;
+    width: 20rem;
     display: flex;
     align-items: center;
     flex-direction: column;
