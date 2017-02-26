@@ -6,6 +6,6 @@ languages:
 - :es
 - :ca
 language: :es
-permalink: teams/es/equipo-artistico
+permalink: es/teams/equipo-artistico
 ---
 

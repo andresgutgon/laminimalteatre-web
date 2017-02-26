@@ -13,6 +13,21 @@ require 'byebug'
 # end
 
 I18n.available_locales.each do |locale|
+  directory "src/home/#{locale.to_s}" do
+    I18n.with_locale(locale) do
+      create_post 'index.md' do
+        frontmatter(
+          :yaml,
+          layout: 'home',
+          languages: I18n.available_locales,
+          language: locale,
+          image_url: dato.home.home_image.file.width(400).to_url,
+          permalink: "#{locale.to_s}/index"
+        )
+      end
+    end
+  end
+
   dato.teams.each do |team|
     directory "src/teams/#{locale.to_s}/#{team.slug}" do
       I18n.with_locale(locale) do
@@ -23,7 +38,7 @@ I18n.available_locales.each do |locale|
             name: team.name,
             languages: I18n.available_locales,
             language: locale,
-            permalink: "teams/#{locale.to_s}/#{team.slug}"
+            permalink: "#{locale.to_s}/teams/#{team.slug}"
           )
         end
       end
