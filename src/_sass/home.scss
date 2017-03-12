@@ -94,10 +94,18 @@
   width: 100%;
   &__title {
     margin: 0 0 3rem 0;
-    background-color: $brand;
-    border-radius: .2rem;
     padding: .4rem;
     text-align: center;
+    position: relative;
+    &:after {
+      content: '';
+      background-color: $brand;
+      position: absolute;
+      left: calc(50% - 5rem);
+      bottom: -1rem;
+      height: .2rem;
+      width: 10rem;
+    }
   }
 
   &__members {

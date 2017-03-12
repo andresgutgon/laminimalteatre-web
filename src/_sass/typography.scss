@@ -16,6 +16,9 @@ $line_height: 26;
 
 html {
   font-size: 62.5%;
+  @media (min-width: 780px) {
+    font-size: 70%;
+  }
 }
 
 body {
