@@ -61,10 +61,10 @@ I18n.available_locales.each do |locale|
         frontmatter(
           :yaml,
           layout: 'home',
-          languages: languages,
-          current_locale: locale.to_s,
+          language: locale.to_s,
           image_url: dato.home.home_image.file.width(800).to_url,
           intro_text: dato.home.intro_text,
+          subset: 'home',
           permalink: "#{locale}/"
         )
       end

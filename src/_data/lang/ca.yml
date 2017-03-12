@@ -3,5 +3,10 @@ lang:
   es: espanyol
   ca: català 
   en: anglès
-home:
-  welcome: Bon dia mundo
+main_menu:
+  team: El equip
+  story: La nostra historia
+  shows: Espectacles
+  courses: Curses
+  gallery: Galeria
+  blog: Blog

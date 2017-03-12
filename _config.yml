@@ -11,7 +11,7 @@ destination: './build'
 markdown: kramdown
 
 # not used by plugin but by liquid template
-languages: ['es', 'ca', 'en']
+languages: ['en', 'ca', 'es']
 
 # Language plugin options
 language_data: data.lang.%%

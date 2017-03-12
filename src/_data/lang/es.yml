@@ -3,5 +3,10 @@ lang:
   es: español
   ca: catalán
   en: inglés
-home:
-  welcome: Hola mundo
+main_menu:
+  team: El equipo
+  story: Nuestra historia
+  shows: espectáculos
+  courses: Cursos
+  gallery: Galería
+  blog: Blog
