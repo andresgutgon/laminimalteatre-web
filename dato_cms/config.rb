@@ -22,6 +22,16 @@ def field_in_all_locales(record, field_name, current_locale)
     end
 end
 
+def get_permalinks(record, field_name, locale)
+  field_in_all_locales(record, field_name, locale)
+    .map do |slug|
+      {
+        url: slug_url(slug),
+        locale: slug[:locale].to_s
+      }
+    end
+end
+
 # dato.available_locales.each do |locale|
 #   directory 'content/#{locale}' do
 #     I18n.with_locale(locale) do
@@ -83,13 +93,7 @@ directory "src/shows" do
   I18n.available_locales.each do |locale|
     I18n.with_locale(locale) do
       dato.plays.each do |play|
-        slugs = field_in_all_locales(play, :slug, locale)
-        permalinks = slugs.map do |slug|
-          {
-            url: slug_url(slug),
-            locale: slug[:locale].to_s
-          }
-        end
+        permalinks = get_permalinks(play, :slug, locale)
         permalink = slug_url_with_index({ slug: play.slug, locale: locale })
         create_post "#{locale.to_s}_#{play.slug}.yaml" do
           galery = play.galery.map do |item|
