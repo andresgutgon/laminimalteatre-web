@@ -18,8 +18,12 @@ language_data: data.lang.%%
 language_includes_dir: _i18n
 
 collections:
- - members
- - teams
+  members:
+    output: false
+  teams:
+    output: false
+  shows:
+    output: true
 
 gems:
   - jekyll-language-plugin

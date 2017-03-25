@@ -1,3 +1,21 @@
+PATH
+  remote: /Users/fdev/code/opensource/ruby-datocms-client
+  specs:
+    dato (0.3.11)
+      activesupport (>= 4.2.7)
+      addressable
+      cacert
+      dotenv
+      downloadr
+      faraday (>= 0.9.0)
+      faraday_middleware (>= 0.9.0)
+      fastimage
+      imgix (>= 0.3.1)
+      listen
+      pusher-client
+      thor
+      toml
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -14,20 +32,6 @@ GEM
     coderay (1.1.1)
     colorator (1.1.0)
     concurrent-ruby (1.0.4)
-    dato (0.3.5)
-      activesupport (>= 4.2.7)
-      addressable
-      cacert
-      dotenv
-      downloadr
-      faraday (>= 0.9.0)
-      faraday_middleware (>= 0.9.0)
-      fastimage
-      imgix (>= 0.3.1)
-      pusher-client
-      thor
-      toml
-      video_embed
     domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
@@ -113,7 +117,6 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
-    video_embed (0.1.0)
     websocket (1.2.3)
 
 PLATFORMS
@@ -121,7 +124,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  dato
+  dato!
   jekyll (= 3.3.1)
   jekyll-language-plugin
   octopress-debugger

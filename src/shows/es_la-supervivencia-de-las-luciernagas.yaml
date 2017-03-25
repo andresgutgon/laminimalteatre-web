@@ -1,0 +1,22 @@
+---
+layout: show
+title: La supervivencia de las luciérnagas
+language: es
+galery:
+- image_url: https://www.datocms-assets.com/1035/1489343599-img_20140718_225446-jpg?ch=DPR%2CWidth&auto=format&w=800
+  image_thumbnail_url: https://www.datocms-assets.com/1035/1489343599-img_20140718_225446-jpg?ch=DPR%2CWidth&auto=format&w=220
+  title: 
+- image_url: https://www.datocms-assets.com/1035/1489343646-10408692_708555195885297_1357345228287273063_n-jpg?ch=DPR%2CWidth&auto=format&w=800
+  image_thumbnail_url: https://www.datocms-assets.com/1035/1489343646-10408692_708555195885297_1357345228287273063_n-jpg?ch=DPR%2CWidth&auto=format&w=220
+  title: 
+- image_url: https://www.datocms-assets.com/1035/1489343716-portada_hsf5-jpg?ch=DPR%2CWidth&auto=format&w=800
+  image_thumbnail_url: https://www.datocms-assets.com/1035/1489343716-portada_hsf5-jpg?ch=DPR%2CWidth&auto=format&w=220
+  title: 
+permalinks:
+- url: ca/espectacles/la-superviviencia-de-les-lluernas
+  locale: ca
+- url: en/shows/the-survival-of-the-fireflies
+  locale: en
+permalink: es/espectaculos/la-supervivencia-de-las-luciernagas/index.html
+---
+
