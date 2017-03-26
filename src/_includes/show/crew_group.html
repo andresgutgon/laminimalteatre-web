@@ -1,0 +1,18 @@
+{% if include.group.size > 0 %}
+  <div class="playInfo__crewGroup">
+    <h3 class="playInfo__crewGroup__title">
+      {% assign title_key = 'crew.' | append: include.title %}
+      {% t title_key %}
+    </h3>
+    <div class="playInfo__crewList">
+      {% for member in include.group %}
+        <div class="playInfo__crewItem">
+          <img src="{{ member.avatar_url }}" />
+          <div class="playInfo__crewItem__title">
+            {{ member.name}}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

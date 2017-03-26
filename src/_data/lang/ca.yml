@@ -3,6 +3,9 @@ lang:
   es: espanyol
   ca: català 
   en: anglès
+common:
+  and: i
+  directed_by: "Dirigit per"
 main_menu:
   team: El equip
   story: La nostra historia
@@ -10,3 +13,18 @@ main_menu:
   courses: Curses
   gallery: Galeria
   blog: Blog
+
+play:
+ teaser:
+   title: "Video: %%"
+ crew:
+  actors: Actors
+  direction_and_arts: Director and Dramaturgy
+  assistant_director: Ajudants de direcció
+  sound: So
+  music: Música
+  singers: Cantants
+  scenography: Escenografia
+  makeup: Maquillaje
+  lighting: il·luminació
+  costum_design: Vestuari

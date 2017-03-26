@@ -1,0 +1,51 @@
+$background: #f9f9f9;
+$foreground: rgba(255, 255, 255, .8);
+$foreground-light: white;
+$size: 50px;
+$ratio: 1.2;
+$transition-time: 0.3s;
+
+.playButton {
+  cursor: pointer;
+  transition: all $transition-time;
+  background: transparent;
+  display: block;
+  width: 0;
+	height: 0;
+	border-top: $size solid transparent;
+	border-bottom: $size solid transparent;
+	border-left: ($size*$ratio) solid $foreground;
+  position: relative;
+  z-index: 1;
+  opacity: .6;
+  &:before {
+    content:'';
+    position:absolute;
+    top:($size*-1.5);
+    left:($size*-2.3);
+    bottom:($size*-1.5);
+    right:($size*-0.7);
+    border-radius:50%;
+    border: ($size*0.2) solid $foreground;
+    z-index:2;
+    transition: all $transition-time;
+    -webkit-transition: all $transition-time;
+    -moz-transition: all $transition-time;
+  }
+  &:after {
+    content:'';
+    opacity:0;
+    transition: opacity ($transition-time * 2);
+    -webkit-transition: opacity ($transition-time * 2);
+    -moz-transition: opacity ($transition-time * 2);
+  }
+  &:hover, &:focus {
+    outline: none;
+    opacity: 1;
+    &:before {
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+    }
+  }
+}

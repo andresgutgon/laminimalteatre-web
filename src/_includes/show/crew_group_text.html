@@ -1,0 +1,13 @@
+{% if include.cast['members'].size > 0 %}
+  <div class="playInfo__crewGroupText">
+    <h3 class="playInfo__crewGroupText__title">
+      {% assign title_key = 'crew.' | append: include.cast['key'] %}
+      {% t title_key %}
+    </h3>
+    <div class="playInfo__crewGroupText__item">
+      {% for member in include.cast['members'] %}
+        {{ member }}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

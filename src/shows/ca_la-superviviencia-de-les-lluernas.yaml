@@ -1,6 +1,14 @@
 ---
 layout: show
 title: La supervivència de les lluernes
+teaser:
+  video_id: '112506934'
+  url: https://vimeo.com/112506934
+  player_url: https://player.vimeo.com/video/112506934
+  thumbnail_url: https://i.vimeocdn.com/video/533408660_640.jpg
+  width: 640
+  height: 360
+  title: TEASER La supervivencia de las Luciérnagas
 language: ca
 galery:
 - image_url: https://www.datocms-assets.com/1035/1489343599-img_20140718_225446-jpg?ch=DPR%2CWidth&auto=format&w=800
@@ -18,5 +26,41 @@ permalinks:
 - url: en/shows/the-survival-of-the-fireflies
   locale: en
 permalink: ca/espectacles/la-superviviencia-de-les-lluernas/index.html
+directed_by: Daniela  De Vecchi, Núria  Vizcarro, Joan  Fortuny
+actors:
+- name: Carla  Rovira
+  avatar_url: https://www.datocms-assets.com/1035/1488135502-carla_laminimal-150x150-png?ch=DPR%2CWidth&auto=format&w=100
+- name: Eloi  Benet
+  avatar_url: https://www.datocms-assets.com/1035/1488133751-eloi_laminimal-150x150-png?ch=DPR%2CWidth&auto=format&w=100
+- name: Joan  Martínez
+  avatar_url: https://www.datocms-assets.com/1035/1488134683-joan_martinez-jpeg?ch=DPR%2CWidth&auto=format&w=100
+- name: Marina  Rojo
+  avatar_url: https://www.datocms-assets.com/1035/1488133232-marina-jpeg?ch=DPR%2CWidth&auto=format&w=100
+- name: Toni Figuera
+  avatar_url: https://www.datocms-assets.com/1035/1488134346-toni-jpeg?ch=DPR%2CWidth&auto=format&w=100
+- name: Xantal  Gabarró
+  avatar_url: https://www.datocms-assets.com/1035/1488134397-xantal_laminimal-150x150-png?ch=DPR%2CWidth&auto=format&w=100
+- name: Xesco  Pintó
+  avatar_url: https://www.datocms-assets.com/1035/1488135401-xescu-150x150-jpeg?ch=DPR%2CWidth&auto=format&w=100
+cast:
+- key: direction_and_arts
+  members: Daniela  De Vecchi, Núria  Vizcarro, Joan  Fortuny
+- key: sound
+  members: Daniela  De Vecchi
+- key: music
+  members: Núria  Vizcarro
+- key: singers
+  members: Andrea  Marinel·lo
+- key: scenography
+  members: Joan  Martínez
+- key: makeup
+  members: Marina  Rojo, Andrea  Marinel·lo
+- key: lighting
+  members: Ignasi Bosch
+synopsis: |-
+  Any 1975, nou persones amagades en la foscor de la seva soledat, ofuscades entre les llums i les ombres d’aquest moment, en la vulgarit- zació de les seves experiències quotidianes. Nou recorreguts diferents pel passat, cada un d’ells per a un selecte grup d’espectadors, que seguiran els personatges per arribar a establir enllaços amb la nostra actualitat. Diferents perspectives d’una mateixa història, diferents realitats per a una sola societat, diferents societats on intentar sobreviure.
+
+  En aquesta segona part, LAminimAL proposa un encontre amb el nostre passat recent, per respondre’ns què queda de la nostra llum en els moments de canvi, com afecten les ombres de la nostra història a la nostra supervivència actual. Ens trobem en un espai on tots, actors i públic, tindrem l’oportunitat de tornar-nos lluerna i, per un instant d’excepció, convertir-nos en éssers luminescents, dansants, erràtics, inaprehensibles.
+subset: play
 ---
 

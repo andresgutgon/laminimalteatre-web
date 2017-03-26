@@ -1,4 +1,85 @@
 ---
 layout: page
 ---
-<h1>{{ page.title }}</h1>
+<!--Teaser video modal-->
+<div id="modalTeaser" class="modal modal--fullscreen fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content teaser__modal">
+      <div class="content">
+        <button type="button" class="closeModal" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <iframe id="modalTeaserVideo" src="{{ page.teaser.player_url }}?title=0&byline=0&portrait=0" frameborder="0" width="900" height="505" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Teaser banner -->
+<div class="teaser" style="background-image: url({{ page.teaser.thumbnail_url }})">
+  <div class="teaser__overlay"></div>
+  <iframe id="teaser" class="teaser__iframe" src="{{ page.teaser.player_url }}?autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1&mute=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <div class="teaser__play">
+    <div data-toggle="modal" data-target="#modalTeaser" id="teaserPlay" class="playButton"></div>
+  </div>
+  <!--Include the Vimeo API Library-->
+  <script src="https://player.vimeo.com/api/player.js"></script>
+
+  <!--Select and mute teaser video-->
+  <script type="text/javascript">
+    var videoModal = document.getElementById('modalTeaserVideo');
+    var playerModal = new Vimeo.Player(videoModal);
+    var video = document.getElementById('teaser');
+    var player = new Vimeo.Player(video);
+    player.ready().then(function() {
+      $(video).css('display', 'block');
+      player.setVolume(0);
+
+      $('#modalTeaser').on('shown.bs.modal', function (e) {
+        $('body').addClass('modal-open--fullscreen');
+        playerModal.play();
+      })
+      $('#modalTeaser').on('hide.bs.modal', function (e) {
+        $('body').removeClass('modal-open--fullscreen');
+        playerModal.pause();
+      })
+    });
+
+  </script>
+  <div class="teaser__info">
+    <div class="container">
+      <div class="teaser__infoContent">
+        {% if page.teaser.title %}
+          <a href="{{page.teaser.url}}" target="_blank" class="teaser__title">
+            {% t 'teaser.title': page.teaser.title %}
+          </a>
+        {% endif %}
+        <h1>{{ page.title }}</h1>
+        <div class="teaser__directed">
+          <span>{% t 'common.directed_by' %}:</span>
+          {{ page.directed_by }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Play info -->
+<div class="playInfo">
+  <div class="container playInfo__container">
+    <div class="playInfo__content">
+      <div class="playInfo__synopsis">
+        <h2>Synopsis</h2>
+        {{ page.synopsis | markdownify }}
+      </div>
+
+      <div class="playInfo__technicalCrew">
+        {% for cast in page.cast %}
+          {% include show/crew_group_text.html cast=cast %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="playInfo__crew">
+      {% include show/crew_group.html title='actors' group=page.actors %}
+    </div>
+  </div>
+</div>
+

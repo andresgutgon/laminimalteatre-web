@@ -3,6 +3,9 @@ lang:
   es: español
   ca: catalán
   en: inglés
+common:
+  and: y
+  directed_by: "Dirigido por"
 main_menu:
   team: El equipo
   story: Nuestra historia
@@ -10,3 +13,17 @@ main_menu:
   courses: Cursos
   gallery: Galería
   blog: Blog
+
+play:
+ teaser:
+   title: "Video: %%"
+ crew:
+  actors: Actores
+  direction_and_arts: Dirección y Dramaturgia
+  sound: Espacio Sonoro
+  music: Música
+  singers: Cantantes
+  scenography: Escenografía
+  makeup: Maquillaje
+  lighting: il·luminació
+  costum_design: Vestuari

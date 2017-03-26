@@ -1,5 +1,48 @@
 require 'byebug'
 
+PLAY_CAST = %w(
+  direction_and_arts
+  sound
+  music
+  singers
+  scenography
+  makeup
+  lighting
+  costum_design
+  assistant_director
+).freeze
+
+def full_name(person)
+  "#{person.name} #{person.surname}"
+end
+
+def play_cast(play)
+  PLAY_CAST.reduce([]) do |memo, cast_item|
+    begin
+      cast = play.send(cast_item)
+      return memo unless cast.present?
+      memo << {
+        key: cast_item,
+        members: cast.map { |member| full_name(member) }.join(', ')
+      }
+      memo
+    rescue StandardError => error
+      print "Error getting cast field: #{error}"
+    end
+  end
+end
+
+def play_actors(actors)
+  actors
+  .sort! { |x, y| x.name <=> y.name }
+  .map do |actor|
+    {
+      name: full_name(actor),
+      avatar_url: actor.avatar.file.width(100).to_url
+    }
+  end
+end
+
 def slug_url(slug:, locale:)
   "#{locale.to_s}/#{SHOW_ROOT[locale]}/#{slug}"
 end
@@ -93,9 +136,27 @@ directory "src/shows" do
   I18n.available_locales.each do |locale|
     I18n.with_locale(locale) do
       dato.plays.each do |play|
+        actors = play_actors(play.actors)
+        cast = play_cast(play)
         permalinks = get_permalinks(play, :slug, locale)
         permalink = slug_url_with_index({ slug: play.slug, locale: locale })
         create_post "#{locale.to_s}_#{play.slug}.yaml" do
+          directed_by = play.direction_and_arts
+            .map do |person|
+              attr = person.attributes
+              "#{attr[:name]} #{attr[:surname]}"
+            end
+            .join(', ')
+          video_id = play.teaser.provider_uid
+          teaser = {
+            video_id: video_id,
+            url: play.teaser.url,
+            player_url: "https://player.vimeo.com/video/#{video_id}",
+            thumbnail_url: play.teaser.thumbnail_url,
+            width: play.teaser.width,
+            height: play.teaser.height,
+            title: play.teaser.title
+          }
           galery = play.galery.map do |item|
             {
               image_url: item.file.width(800).to_url,
@@ -106,10 +167,16 @@ directory "src/shows" do
           frontmatter :yaml,
             layout: 'show',
             title: play.title,
+            teaser: teaser,
             language: locale.to_s,
             galery: galery,
             permalinks: permalinks,
-            permalink: permalink
+            permalink: permalink,
+            directed_by: directed_by,
+            actors: actors,
+            cast: cast,
+            synopsis: play.synopsis,
+            subset: 'play'
         end
       end
     end

@@ -2,6 +2,7 @@
  * Vendor
  */
 @import "vendor/normalize";
+@import "vendor/bootstrap";
 
 /**
  * Modules
@@ -11,7 +12,17 @@
 @import "layout";
 @import "header";
 
+/**
+ * Components
+ */
+@import "components/play_button";
+@import "components/modal";
+
+/**
+ * Pages
+ */
 @import "home";
+@import "show";
 
 .content {
   padding-top: $header_height;
