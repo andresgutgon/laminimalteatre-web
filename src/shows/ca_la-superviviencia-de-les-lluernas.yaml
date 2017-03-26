@@ -10,15 +10,45 @@ teaser:
   height: 360
   title: TEASER La supervivencia de las Luciérnagas
 language: ca
-galery:
-- image_url: https://www.datocms-assets.com/1035/1489343599-img_20140718_225446-jpg?ch=DPR%2CWidth&auto=format&w=800
-  image_thumbnail_url: https://www.datocms-assets.com/1035/1489343599-img_20140718_225446-jpg?ch=DPR%2CWidth&auto=format&w=220
+gallery:
+- url: https://www.datocms-assets.com/1035/1489343599-img_20140718_225446-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1489343599-img_20140718_225446-jpg?ch=DPR%2CWidth&auto=format&w=100
   title: 
-- image_url: https://www.datocms-assets.com/1035/1489343646-10408692_708555195885297_1357345228287273063_n-jpg?ch=DPR%2CWidth&auto=format&w=800
-  image_thumbnail_url: https://www.datocms-assets.com/1035/1489343646-10408692_708555195885297_1357345228287273063_n-jpg?ch=DPR%2CWidth&auto=format&w=220
+- url: https://www.datocms-assets.com/1035/1489343646-10408692_708555195885297_1357345228287273063_n-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1489343646-10408692_708555195885297_1357345228287273063_n-jpg?ch=DPR%2CWidth&auto=format&w=100
   title: 
-- image_url: https://www.datocms-assets.com/1035/1489343716-portada_hsf5-jpg?ch=DPR%2CWidth&auto=format&w=800
-  image_thumbnail_url: https://www.datocms-assets.com/1035/1489343716-portada_hsf5-jpg?ch=DPR%2CWidth&auto=format&w=220
+- url: https://www.datocms-assets.com/1035/1489343716-portada_hsf5-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1489343716-portada_hsf5-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-11-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-11-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-7-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-7-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-4-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-4-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548494-laminimal-luciernagas-2-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548494-laminimal-luciernagas-2-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-5-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-5-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-8-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-8-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548494-laminimal-luciernagas-10-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548494-laminimal-luciernagas-10-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-3-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-3-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548494-laminimal-luciernagas-9-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548494-laminimal-luciernagas-9-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-6-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548493-laminimal-luciernagas-6-jpg?ch=DPR%2CWidth&auto=format&w=100
   title: 
 permalinks:
 - url: es/espectaculos/la-supervivencia-de-las-luciernagas
@@ -26,7 +56,7 @@ permalinks:
 - url: en/shows/the-survival-of-the-fireflies
   locale: en
 permalink: ca/espectacles/la-superviviencia-de-les-lluernas/index.html
-directed_by: Daniela  De Vecchi, Núria  Vizcarro, Joan  Fortuny
+directed_by: Daniela  De Vecchi, Núria  Vizcarro, Joan  Fortuny, Albert Pijuan
 actors:
 - name: Carla  Rovira
   avatar_url: https://www.datocms-assets.com/1035/1488135502-carla_laminimal-150x150-png?ch=DPR%2CWidth&auto=format&w=100
@@ -44,7 +74,7 @@ actors:
   avatar_url: https://www.datocms-assets.com/1035/1488135401-xescu-150x150-jpeg?ch=DPR%2CWidth&auto=format&w=100
 cast:
 - key: direction_and_arts
-  members: Daniela  De Vecchi, Núria  Vizcarro, Joan  Fortuny
+  members: Daniela  De Vecchi, Núria  Vizcarro, Joan  Fortuny, Albert Pijuan
 - key: sound
   members: Daniela  De Vecchi
 - key: music
@@ -62,5 +92,10 @@ synopsis: |-
 
   En aquesta segona part, LAminimAL proposa un encontre amb el nostre passat recent, per respondre’ns què queda de la nostra llum en els moments de canvi, com afecten les ombres de la nostra història a la nostra supervivència actual. Ens trobem en un espai on tots, actors i públic, tindrem l’oportunitat de tornar-nos lluerna i, per un instant d’excepció, convertir-nos en éssers luminescents, dansants, erràtics, inaprehensibles.
 subset: play
+externalJsFiles:
+- https://player.vimeo.com/api/player.js
+jsFiles:
+- assets/js/vendor/jquery.gallery.min.js
+- assets/js/pages/show.js
 ---
 

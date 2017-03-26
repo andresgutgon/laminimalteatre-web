@@ -3,9 +3,18 @@
   {% include head.html %}
   <body>
     {{ content }}
+
     <script src='{{ site.baseurl }}/assets/js/vendor/jquery.min.js'></script>
     <script src='{{ site.baseurl }}/assets/js/vendor/bootstrap.min.js'></script>
     <script src='{{ site.baseurl }}/assets/js/language-redirect.js'></script>
     <script src='{{ site.baseurl }}/assets/js/main.js'></script>
+
+    {% for jsFile in page.externalJsFiles %}
+      <script src="{{ jsFile }}"></script>
+    {% endfor %}
+
+    {% for jsFile in page.jsFiles %}
+      <script src="{{ site.baseurl }}/{{ jsFile }}"></script>
+    {% endfor %}
   </body>
 </html>

@@ -6,7 +6,7 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto+Slab" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   {% include canonical_url.html %}
 
   {% if jekyll.environment == 'production' and site.google_analytics %}

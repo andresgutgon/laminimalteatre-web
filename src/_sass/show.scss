@@ -102,7 +102,7 @@ $zindex_play_button: 3;
 }
 
 .playInfo {
-  margin-top: 3rem;
+  margin-top: 2rem;
   &__container {
     display: flex;
     flex-direction: column;
@@ -114,13 +114,12 @@ $zindex_play_button: 3;
   &__content {
     flex: 1 1 70%;
     margin-right: 3rem;
-    order: 1;
-    @media (min-width: 780px) {
-      order: 0;
-    }
   }
 
   &__synopsis {
+    h2 {
+      margin-top: 0;
+    }
     p {
       &:first-child {
         margin-top: 0
@@ -130,16 +129,15 @@ $zindex_play_button: 3;
 
   &__crew {
     flex: 1 1 30%;
-    order: 0;
-    padding: 2rem;
-    border-left: 2px solid $grey5;
-    &__content {
-    }
+    margin-top: 2rem;
+
     h2 {
       margin-top: 0;
     }
     @media (min-width: 780px) {
-      order: 1;
+      margin-top: 0;
+      /* border-left: 2px solid $grey5; */
+      padding: 2rem;
     }
   }
 
@@ -214,5 +212,23 @@ $zindex_play_button: 3;
     @media (min-width: 780px) {
       width: auto;
     }
+  }
+}
+
+.playGallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  &__item {
+    cursor: pointer;
+    display: block;
+    width: 8rem;
+    min-width: 8rem;
+    height: 8rem;
+    border: 1px solid $grey1;
+    background-size: cover;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
   }
 }

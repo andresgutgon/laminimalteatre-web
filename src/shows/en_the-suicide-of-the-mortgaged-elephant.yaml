@@ -1,0 +1,82 @@
+---
+layout: show
+title: The suicide of the mortaged elephant
+teaser:
+  video_id: '63916224'
+  url: https://vimeo.com/63916224
+  player_url: https://player.vimeo.com/video/63916224
+  thumbnail_url: https://i.vimeocdn.com/video/475905462_640.jpg
+  width: 640
+  height: 360
+  title: 'Teaser "Hacer sonar una flor a pesar de todo. Parte 1: El suicidio del elefante
+    hipotecado"'
+language: en
+gallery:
+- url: https://www.datocms-assets.com/1035/1490548617-laminimalelefant5-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548617-laminimalelefant5-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548616-laminimalelefant2-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548616-laminimalelefant2-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548617-laminimalelefant6-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548617-laminimalelefant6-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548617-laminimalelefant4-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548617-laminimalelefant4-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548616-laminimalelefant1-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548616-laminimalelefant1-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+- url: https://www.datocms-assets.com/1035/1490548617-laminimalelefant3-jpg?ch=DPR%2CWidth&auto=format&w=800
+  thumbnail_url: https://www.datocms-assets.com/1035/1490548617-laminimalelefant3-jpg?ch=DPR%2CWidth&auto=format&w=100
+  title: 
+permalinks:
+- url: es/espectaculos/el-suicidio-del-elefante-hipotecado
+  locale: es
+- url: ca/espectacles/el-suicidi-de-l-elefant-hipotecat
+  locale: ca
+permalink: en/shows/the-suicide-of-the-mortgaged-elephant/index.html
+directed_by: Daniela  De Vecchi
+actors:
+- name: Andrea  Hernandez
+  avatar_url: https://www.datocms-assets.com/1035/1488134472-andrea_hernandez_2-e1436357081697-jpeg?ch=DPR%2CWidth&auto=format&w=100
+- name: Anna  Berenguer
+  avatar_url: https://www.datocms-assets.com/1035/1488133869-anna-jpeg?ch=DPR%2CWidth&auto=format&w=100
+- name: Carla  Rovira
+  avatar_url: https://www.datocms-assets.com/1035/1488135502-carla_laminimal-150x150-png?ch=DPR%2CWidth&auto=format&w=100
+- name: Cris  Codina
+  avatar_url: https://www.datocms-assets.com/1035/1488134162-cris_codina_2-e1436356833306-jpeg?ch=DPR%2CWidth&auto=format&w=100
+- name: Eloi  Benet
+  avatar_url: https://www.datocms-assets.com/1035/1488133751-eloi_laminimal-150x150-png?ch=DPR%2CWidth&auto=format&w=100
+- name: Esperança  Crespí
+  avatar_url: https://www.datocms-assets.com/1035/1488134270-espe-150x150-jpeg?ch=DPR%2CWidth&auto=format&w=100
+- name: Joan  Martínez
+  avatar_url: https://www.datocms-assets.com/1035/1488134683-joan_martinez-jpeg?ch=DPR%2CWidth&auto=format&w=100
+- name: Toni Figuera
+  avatar_url: https://www.datocms-assets.com/1035/1488134346-toni-jpeg?ch=DPR%2CWidth&auto=format&w=100
+- name: Xantal  Gabarró
+  avatar_url: https://www.datocms-assets.com/1035/1488134397-xantal_laminimal-150x150-png?ch=DPR%2CWidth&auto=format&w=100
+- name: Xesco  Pintó
+  avatar_url: https://www.datocms-assets.com/1035/1488135401-xescu-150x150-jpeg?ch=DPR%2CWidth&auto=format&w=100
+cast:
+- key: direction_and_arts
+  members: Daniela  De Vecchi
+- key: sound
+  members: Daniela  De Vecchi
+- key: music
+  members: Andrea  Hernandez
+synopsis: |-
+  In the entrance hall, little by little the spectators get closer to the experience proposed by LAminimAL. A few glasses of wine, the daily newspapers, nice chatting; everything is set for the openning of the systems they will find as soon as they enter the main hall, from where they can hear a sweet song, played live by a cello and an electric guitar.
+  From this moment onwards, they can take a walk through the scenic installations as If they were in a museum, and look closely at the small cores of intimate relationships that will be transformed gradually into a big scene, involving the audience. By now there is no turning back: the current events take possession of the action. They amplify a debate that goes from the most intimate to the community. It brings to debate the need of acting inside and outside the stage.
+
+  “Where is the limit between action and desperation? In Spain, the global crisis has produced countless suicides in the victims of banks. They’ve put an end to their lives because of the imminent threat of losing their homes. Have they killed themselves for that? Poor people are always guilty of their actions, even their own deaths”
+
+  The success of the performance after its premmiere in Teatre Tantarantana’s Àtic22 of Barcelona made it to extend the showing for two months. “The Suicide of the Mortgaged Elephant” is a global experience: aesthetical, theatrical, social and, -why not?- political.
+subset: play
+externalJsFiles:
+- https://player.vimeo.com/api/player.js
+jsFiles:
+- assets/js/vendor/jquery.gallery.min.js
+- assets/js/pages/show.js
+---
+

@@ -157,10 +157,10 @@ directory "src/shows" do
             height: play.teaser.height,
             title: play.teaser.title
           }
-          galery = play.galery.map do |item|
+          gallery = play.gallery.map do |item|
             {
-              image_url: item.file.width(800).to_url,
-              image_thumbnail_url: item.file.width(220).to_url,
+              url: item.file.width(800).to_url,
+              thumbnail_url: item.file.width(100).to_url,
               title: item.title
             }
           end
@@ -169,14 +169,19 @@ directory "src/shows" do
             title: play.title,
             teaser: teaser,
             language: locale.to_s,
-            galery: galery,
+            gallery: gallery,
             permalinks: permalinks,
             permalink: permalink,
             directed_by: directed_by,
             actors: actors,
             cast: cast,
             synopsis: play.synopsis,
-            subset: 'play'
+            subset: 'play',
+            externalJsFiles: ['https://player.vimeo.com/api/player.js'],
+            jsFiles: [
+            'assets/js/vendor/jquery.gallery.min.js',
+            'assets/js/pages/show.js'
+          ]
         end
       end
     end
