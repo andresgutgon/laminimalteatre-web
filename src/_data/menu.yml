@@ -1,0 +1,20 @@
+root:
+  es: es
+  ca: ca
+  en: en
+show:
+  es: espectaculos
+  ca: espectacles
+  en: shows
+courses:
+  es: cursos
+  ca: cursos
+  en: courses
+gallery:
+  es: galeria
+  ca: galeria
+  en: gallery
+blog:
+  es: blog
+  ca: blog
+  en: blog

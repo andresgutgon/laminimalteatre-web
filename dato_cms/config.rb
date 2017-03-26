@@ -1,5 +1,33 @@
 require 'byebug'
 
+MAIN_MENU  = {
+  root: {
+    es: 'es',
+    ca: 'ca',
+    en: 'en'
+  },
+  show: {
+    es: 'espectaculos',
+    ca: 'espectacles',
+    en: 'shows'
+  },
+  courses: {
+    es: 'cursos',
+    ca: 'cursos',
+    en: 'courses'
+  },
+  gallery: {
+    es: 'galeria',
+    ca: 'galeria',
+    en: 'gallery'
+  },
+  blog: {
+    es: 'blog',
+    ca: 'blog',
+    en: 'blog'
+  }
+}
+
 PLAY_CAST = %w(
   direction_and_arts
   sound
@@ -43,8 +71,12 @@ def play_actors(actors)
   end
 end
 
+def menu_root(item, locale)
+  MAIN_MENU[item][locale.to_sym]
+end
+
 def slug_url(slug:, locale:)
-  "#{locale.to_s}/#{SHOW_ROOT[locale]}/#{slug}"
+  "#{locale.to_s}/#{menu_root(:show, locale)}/#{slug}"
 end
 
 def slug_url_with_index(slug)
@@ -74,6 +106,8 @@ def get_permalinks(record, field_name, locale)
       }
     end
 end
+
+create_data_file('src/_data/menu.yml', :yaml, MAIN_MENU)
 
 # dato.available_locales.each do |locale|
 #   directory 'content/#{locale}' do
@@ -126,12 +160,6 @@ directory "src/_members" do
   end
 end
 
-SHOW_ROOT  = {
-  es: 'espectaculos',
-  ca: 'espectacles',
-  en: 'shows'
-}
-
 directory "src/shows" do
   I18n.available_locales.each do |locale|
     I18n.with_locale(locale) do
@@ -179,9 +207,9 @@ directory "src/shows" do
             subset: 'play',
             externalJsFiles: ['https://player.vimeo.com/api/player.js'],
             jsFiles: [
-            'assets/js/vendor/jquery.gallery.min.js',
-            'assets/js/pages/show.js'
-          ]
+              'assets/js/vendor/jquery.gallery.min.js',
+              'assets/js/pages/show.js'
+            ]
         end
       end
     end

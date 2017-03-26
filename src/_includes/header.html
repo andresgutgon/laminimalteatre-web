@@ -5,12 +5,36 @@
         {% include logo.html %}
       </div>
       <ul class="header__nav">
-        <li><a class="js-scroll-header-item header__nav__item" href="#story">{% t 'main_menu.story' %}</a></li>
-        <li><a class="js-scroll-header-item header__nav__item" href="#team">{% t 'main_menu.team' %}</a></li>
-        <li><a class="header__nav__item" href="#">{% t 'main_menu.shows' %}</a></li>
-        <li><a class="header__nav__item" href="#">{% t 'main_menu.courses' %}</a></li>
-        <li><a class="header__nav__item" href="#">{% t 'main_menu.gallery' %}</a></li>
-        <li><a class="header__nav__item" href="#">{% t 'main_menu.blog' %}</a></li>
+        <li>
+          <a class="js-scroll-header-item header__nav__item" href="{{ page | to_url: 'root', nil, 'story' }}">
+            {% t 'main_menu.story' %}
+          </a>
+        </li>
+        <li>
+          <a class="js-scroll-header-item header__nav__item" href="{{ page | to_url: 'root', nil, 'team' }}">
+            {% t 'main_menu.team' %}
+          </a>
+        </li>
+        <li>
+          <a class="header__nav__item" href="{{ page | to_url: 'show' }}">
+            {% t 'main_menu.shows' %}
+          </a>
+        </li>
+        <li>
+          <a class="header__nav__item" href="{{ page | to_url: 'courses' }}">
+            {% t 'main_menu.courses' %}
+          </a>
+        </li>
+        <li>
+          <a class="header__nav__item" href="{{ page | to_url: 'gallery' }}">
+            {% t 'main_menu.gallery' %}
+          </a>
+        </li>
+        <li>
+          <a class="header__nav__item" href="{{ page | to_url: 'blog' }}">
+            {% t 'main_menu.blog' %}
+          </a>
+        </li>
       </ul>
     </div>
   </div>
