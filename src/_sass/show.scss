@@ -129,15 +129,14 @@ $zindex_play_button: 3;
 
   &__crew {
     flex: 1 1 30%;
-    margin-top: 0 2rem;
+    margin-top: 2rem;
 
     h2 {
       margin-top: 0;
     }
     @media (min-width: 780px) {
       margin-top: 0;
-      /* border-left: 2px solid $grey5; */
-      padding: 2rem;
+      padding: 0 2rem;
     }
   }
 
