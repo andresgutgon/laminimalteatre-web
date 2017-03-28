@@ -129,7 +129,7 @@ $zindex_play_button: 3;
 
   &__crew {
     flex: 1 1 30%;
-    margin-top: 2rem;
+    margin-top: 0 2rem;
 
     h2 {
       margin-top: 0;
@@ -145,8 +145,8 @@ $zindex_play_button: 3;
     margin-bottom: 2rem;
     &__title {
       margin-top: 0;
-      padding-bottom: 1rem;
-      margin-bottom: 1rem;
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.2rem;
       border-bottom: 2px solid $brand;
     }
   }
