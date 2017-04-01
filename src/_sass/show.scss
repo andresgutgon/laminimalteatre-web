@@ -36,10 +36,6 @@ $zindex_play_button: 3;
         width: 100%;
       }
 
-      @media only screen and (min-width: $sm) {
-        width: 60rem;
-      }
-
       position: relative;
       padding-top: 6rem;
       .closeModal {

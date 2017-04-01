@@ -7,28 +7,15 @@
   color: black;
   opacity: .8;
 }
-.modal-open {
-  &--fullscreen {
-    .modal-backdrop {
-      background-color: white;
-      opacity: .9;
-    }
-  }
+
+.modal-backdrop {
+  background-color: white;
+  opacity: .95;
 }
 .modal {
-  &--fullscreen &-dialog {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-  &--fullscreen &-header {
-    border: 0
-  }
   &--fullscreen &-content {
-    height: 100%;
-    border: 0;
-    border-radius: 0;
     background: transparent;
     box-shadow: none;
+    border: 0;
   }
 }
