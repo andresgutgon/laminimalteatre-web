@@ -64,13 +64,21 @@
 }
 
 .story {
+  margin-top: 3rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  @media only screen and (min-width: $sm) {
+    flex-direction: row;
+    margin-top: 10rem;
+    &__title {
+      text-align: right;
+    }
+  }
 
   &__title {
-    margin: 0 2rem 0 0;
+    margin: 0 2rem 3rem 0;
     min-width: 30rem;
-    text-align: right;
+    text-align: center;
   }
   &__content {
     display: flex;

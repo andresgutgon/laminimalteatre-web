@@ -2,14 +2,18 @@ root:
   es: es
   ca: ca
   en: en
-team:
-  es: equipo
-  ca: equip
-  en: team
 show:
   es: espectaculos
   ca: espectacles
   en: shows
+story:
+  es: nuestra-historia
+  ca: la-nostra-historia
+  en: our-story
+team:
+  es: equipo
+  ca: equip
+  en: team
 gallery:
   es: galeria
   ca: galeria

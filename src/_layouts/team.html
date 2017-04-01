@@ -3,7 +3,7 @@ layout: page
 ---
 {% include page_header.html title='main_menu.team' %}
 <div class="container" id="team">
-  <div class="block story">
+  <div class="block">
     {% assign teams = site.teams | where: 'locale', page.language | sort: 'position' %}
     <div class="teams">
       {% for team in teams %}
