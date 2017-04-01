@@ -1,0 +1,44 @@
+@keyframes bounceInUp {
+  from, 70%, to {
+    animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(0, 300px, 0)
+  }
+
+  70% {
+    opacity: 1;
+    transform: translate3d(0, -10px, 0)
+  }
+
+  to {
+    transform: translate3d(0, 0, 0)
+  }
+}
+
+.animated {
+  animation-duration: .4s;
+  animation-fill-mode: both;
+  &.infinite {
+    animation-iteration-count: infinite;
+  }
+
+  &.hinge {
+    animation-duration: 2s;
+  }
+
+  &.flipOutX,
+  &.flipOutY,
+  &.bounceIn,
+  &.bounceOut {
+    animation-duration: .75s;
+  }
+}
+
+
+
+.bounceInUp {
+  animation-name: bounceInUp;
+}

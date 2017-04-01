@@ -4,7 +4,8 @@ module Jekyll
     MENU_REGEX = %r{^\w+\/([\-0-9A-Za-z]*)\/?.*$}
     # @param [Hash] page
     # @param [String] menu_item
-    def active_menu(page, menu_item)
+    # @param [String] base_class
+    def active_menu(page, menu_item, base_class)
       permalink = page['permalink']
       return nil if permalink.nil?
       match = MENU_REGEX.match(permalink)
@@ -17,7 +18,7 @@ module Jekyll
 
       return nil unless menu_item_localized.include? current
 
-      'header__nav__item--active'
+      "#{base_class}--active"
     end
   end
 end

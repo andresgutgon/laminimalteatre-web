@@ -9,8 +9,7 @@ common:
 main_menu:
   team: El equip
   story: La nostra historia
-  shows: Espectacles
-  courses: Curses
+  show: Espectacles
   gallery: Galeria
   blog: Blog
 

@@ -123,6 +123,17 @@ def get_permalinks_for_index(root, current_locale)
 end
 
 create_data_file('src/_data/menu.yml', :yaml, MAIN_MENU)
+create_data_file('src/_data/menu_items.yml',
+  :yaml,
+  MAIN_MENU.keys
+    .reject { |key| key == :root }
+    .map do |item|
+      {
+        i18n: "main_menu.#{item}",
+        key: item.to_s
+      }
+    end
+)
 
 # dato.available_locales.each do |locale|
 #   directory 'content/#{locale}' do

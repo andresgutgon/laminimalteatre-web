@@ -8,34 +8,18 @@
         </a>
       </div>
       <ul class="header__nav">
-        <li>
-          <a class="js-scroll-header-item header__nav__item" href="{{ root_url }}#story">
-            {% t 'main_menu.story' %}
-          </a>
-        </li>
-        <li>
-          <a class="js-scroll-header-item header__nav__item" href="{{ page | to_url: 'root' }}#team">
-            {% t 'main_menu.team' %}
-          </a>
-        </li>
-        <li>
-          <a class="header__nav__item {{ page | active_menu: 'show' }}" href="{{ page | to_url: 'show' }}">
-            {% t 'main_menu.shows' %}
-          </a>
-        </li>
-        <li>
-          <a class="header__nav__item" href="{{ page | to_url: 'gallery' }}">
-            {% t 'main_menu.gallery' %}
-          </a>
-        </li>
-        <li>
-          <a class="header__nav__item" href="{{ page | to_url: 'blog' }}">
-            {% t 'main_menu.blog' %}
-          </a>
-        </li>
+        {% for item in site.data.menu_items %}
+          {% assign key = item['key'] %}
+          <li>
+            <a class="header__nav__item {{ page | active_menu: key, 'header__nav__item' }}" href="{{ page | to_url: key }}">
+              {% t item['i18n'] %}
+            </a>
+          </li>
+        {%  endfor %}
 
       </ul>
-      <button class="header__hamburger">
+
+      <button class="js-header-mobile header__hamburger">
         <div class="hamburger">
           <span></span>
           <span></span>
@@ -45,3 +29,14 @@
     </div>
   </div>
 </header>
+
+<ul class="js-mobile-menu mobile-menu">
+{% for item in site.data.menu_items %}
+  {% assign key = item['key'] %}
+  <li>
+    <a class="mobile-menu__link {{ page | active_menu: key, 'mobile-menu__link' }}" href="{{ page | to_url: key }}">
+      {% t item['i18n'] %}
+    </a>
+  </li>
+  {%  endfor %}
+</ul>

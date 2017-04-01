@@ -8,19 +8,6 @@ $bar_height: 2px;
         opacity: 1;
         z-index: $mobile_menu_zindex;
       }
-
-      .header {
-        background-color: transparent;
-        &__logo {
-          opacity: 0;
-        }
-
-        .hamburger {
-          span {
-            background-color: white;
-          }
-        }
-      }
     }
   }
 }

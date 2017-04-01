@@ -9,7 +9,7 @@ common:
 main_menu:
   team: The team
   story: Our story
-  shows: Shows
+  show: Shows
   courses: Cursos
   gallery: Gallery
   blog: Blog

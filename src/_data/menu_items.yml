@@ -1,0 +1,6 @@
+- i18n: main_menu.show
+  key: show
+- i18n: main_menu.gallery
+  key: gallery
+- i18n: main_menu.blog
+  key: blog

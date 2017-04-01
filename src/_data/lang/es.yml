@@ -9,7 +9,7 @@ common:
 main_menu:
   team: El equipo
   story: Nuestra historia
-  shows: Espectáculos
+  show: Espectáculos
   courses: Cursos
   gallery: Galería
   blog: Blog
