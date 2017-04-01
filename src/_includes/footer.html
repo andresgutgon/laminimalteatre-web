@@ -2,6 +2,14 @@
   <div class="site-footer__inner">
     <div class="container">
       <div class="site-footer__content">
+        <ul class="site-footer__social">
+          {% for socialItem in site.data.social_links | sort: 'position' %}
+            <a class="site-footer__social__link" href="{{socialItem['url']}}" title="{{ socialItem['type']}}" target="_blank">
+              {% assign template = socialItem['icon_template'] %}
+              {% include {{template}} %}
+            </a>
+          {% endfor %}
+        </ul>
         <ul class="site-footer__menu">
           {% for item in site.data.menu_items %}
             {% assign key = item['key'] %}
@@ -11,14 +19,6 @@
               </a>
             </li>
           {%  endfor %}
-        </ul>
-        <ul class="site-footer__social">
-          {% for socialItem in site.data.social_links | sort: 'position' %}
-            <a class="site-footer__social__link" href="{{socialItem['url']}}" title="{{ socialItem['type']}}" target="_blank">
-              {% assign template = socialItem['icon_template'] %}
-              {% include {{template}} %}
-            </a>
-          {% endfor %}
         </ul>
       </div>
     </div>
