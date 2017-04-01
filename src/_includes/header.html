@@ -19,7 +19,7 @@
           </a>
         </li>
         <li>
-          <a class="header__nav__item" href="{{ page | to_url: 'show' }}">
+          <a class="header__nav__item {{ page | active_menu: 'show' }}" href="{{ page | to_url: 'show' }}">
             {% t 'main_menu.shows' %}
           </a>
         </li>
