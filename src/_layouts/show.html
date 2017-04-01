@@ -31,8 +31,6 @@ layout: page
   <div class="teaser__play">
     <div data-toggle="modal" data-target="#modalTeaser" id="teaserPlay" class="playButton"></div>
   </div>
-  <!--Include the Vimeo API Library-->
-
   <div class="teaser__info">
     <div class="container">
       <div class="teaser__infoContent">
@@ -46,6 +44,8 @@ layout: page
           <span>{% t 'common.directed_by' %}:</span>
           {{ page.directed_by }}
         </div>
+
+        <div data-toggle="modal" data-target="#modalTeaser" id="teaserPlay" class="teaser__playButtonMobile">{% t 'play.view_video' %}</div>
       </div>
     </div>
   </div>

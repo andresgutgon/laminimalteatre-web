@@ -15,6 +15,7 @@ main_menu:
   blog: Blog
 
 play:
+ view_video: Ver video
  teaser:
    title: "Video: %%"
  crew:

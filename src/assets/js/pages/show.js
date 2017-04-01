@@ -4,7 +4,7 @@ $(function() {
   var video = document.getElementById('teaser');
   var player = new Vimeo.Player(video);
   player.ready().then(function() {
-    $(video).css('display', 'block');
+    $(video).addClass('teaser__iframe--visible');
     player.setVolume(0);
 
     $('#modalTeaser').on('shown.bs.modal', function (e) {

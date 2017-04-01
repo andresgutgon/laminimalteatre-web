@@ -8,9 +8,11 @@ $zindex_play_button: 3;
   background-color: black;
 
   width: 100%;
-  height: $teaser_height;
   overflow: hidden;
   position: relative;
+  @media only screen and (min-width: $sm) {
+    height: $teaser_height;
+  }
 
   &__play {
     z-index: $zindex_play_button;
@@ -19,9 +21,13 @@ $zindex_play_button: 3;
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
+
+    @media only screen and (min-width: $sm) {
+      display: flex;
+    }
   }
 
   &__modal {
@@ -78,22 +84,42 @@ $zindex_play_button: 3;
   &__info {
     position: relative;
     z-index: $zindex_content;
-    height: $teaser_height;
     background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0, 0, 0, .9) 80%);
     background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0, 0, 0, .9) 80%);
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, .9) 80%);
+    @media only screen and (min-width: $sm) {
+      height: $teaser_height;
+    }
+  }
+
+  &__playButtonMobile {
+    border: .2rem solid rgba(255, 255, 255, .8);
+    border-radius: .4rem;
+    background: transparent;
+    margin-top: 2rem;
+    padding: .6rem .8rem;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    @media only screen and (min-width: $sm) {
+      display: none;
+    }
   }
 
   &__infoContent {
     width: 100%;
-    position: absolute;
-    bottom: 5rem;
     color: white;
+    padding: 3rem 0;
     h1 {
       font-size: 3rem;
       margin: .4rem 0;
       font-family: $sans;
       font-weight: 300;
+    }
+    @media only screen and (min-width: $sm) {
+      padding: 0;
+      position: absolute;
+      bottom: 5rem;
     }
   }
 
@@ -104,6 +130,14 @@ $zindex_play_button: 3;
     position: absolute;
     left: 0;
     top: -40%;
+    &--visible {
+      display: none;
+    }
+    @media only screen and (min-width: $sm) {
+      &--visible {
+        display: block;
+      }
+    }
   }
 }
 
