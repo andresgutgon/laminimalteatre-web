@@ -30,13 +30,3 @@
   </div>
 </header>
 
-<ul class="js-mobile-menu mobile-menu">
-{% for item in site.data.menu_items %}
-  {% assign key = item['key'] %}
-  <li>
-    <a class="mobile-menu__link {{ page | active_menu: key, 'mobile-menu__link' }}" href="{{ page | to_url: key }}">
-      {% t item['i18n'] %}
-    </a>
-  </li>
-  {%  endfor %}
-</ul>

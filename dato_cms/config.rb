@@ -6,6 +6,11 @@ MAIN_MENU  = {
     ca: 'ca',
     en: 'en'
   },
+  team: {
+    es: 'equipo',
+    ca: 'equip',
+    en: 'team'
+  },
   show: {
     es: 'espectaculos',
     ca: 'espectacles',
@@ -223,6 +228,22 @@ I18n.available_locales.each do |locale|
       end
     end
   end
+
+  # Team
+  directory "src/team/#{locale.to_s}" do
+    I18n.with_locale(locale) do
+      slug = menu_root(:team, locale)
+      create_post 'index.md' do
+        frontmatter(
+          :yaml,
+          layout: 'team',
+          language: locale.to_s,
+          permalink: "#{locale}/#{slug}/index.html"
+        )
+      end
+    end
+  end
+
 
   # Shows
   directory "src/shows/#{locale.to_s}" do

@@ -1,3 +1,5 @@
+- i18n: main_menu.team
+  key: team
 - i18n: main_menu.show
   key: show
 - i18n: main_menu.gallery
