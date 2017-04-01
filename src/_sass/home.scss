@@ -42,6 +42,18 @@
       top: 3rem;
     }
 
+    &:after {
+      font-size: 3em;
+      color: $brand;
+      content: close-quote;
+      display: inline;
+      height: 0;
+      line-height: 0;
+      left: 10px;
+      position: relative;
+      top: 35px;
+    }
+
     &__footer {
       @include font_size(1.5);
       color: rgba(white, .7);
@@ -104,10 +116,13 @@
 
   &__member {
     margin-bottom: 1rem;
-    width: 20rem;
+    width: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
+    @media only screen and (min-width: $sm) {
+      width: 25%;
+    }
     &__avatar {
       width: 12rem;
       height: 12rem;
