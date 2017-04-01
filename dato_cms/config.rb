@@ -132,6 +132,17 @@ def get_permalinks_for_index(root, current_locale)
       end
 end
 
+create_data_file('src/_data/social_links.yml',
+  :yaml,
+  dato.social_profiles.map do |social|
+    {
+      url: social.url,
+      position: social.position,
+      type: social.profile_type,
+      icon_template: "icons/#{social.profile_type}.html"
+    }
+  end
+)
 create_data_file('src/_data/menu.yml', :yaml, MAIN_MENU)
 create_data_file('src/_data/menu_items.yml',
   :yaml,

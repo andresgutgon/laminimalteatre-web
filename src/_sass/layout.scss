@@ -1,3 +1,9 @@
+body {
+  background-color: $footer_color;
+  display: flex;
+  flex-direction: column;
+}
+
 .wrapper {
   z-index: 1;
 }
@@ -7,8 +13,15 @@
   padding: 0 2.5rem;
 }
 
+.content {
+  background-color: white;
+  padding-top: $header_height;
+  @media only screen and (min-width: $sm) {
+    padding-top: $header_height_big;
+  }
+}
+
 .block {
   padding-bottom: 4.8rem;
   margin-bottom: 4.8rem;
-  border-bottom: 1px solid $grey5;
 }

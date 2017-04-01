@@ -1,10 +1,13 @@
 $brand: #e9d603;
 
+$grey6: #F9F9F9;
 $grey5: #F2F4F5;
 $grey4: #DFE3E6;
 $grey3: #A8AFB3;
 $grey2: #6F7A80;
 $grey1: #1C242B;
+
+$footer_color: $grey6;
 
 $sans: 'Open Sans', sans-serif;
 $serif: 'Roboto Slab', serif;
@@ -14,7 +17,7 @@ $logo_height: 5rem;
 $header_height: $logo_height;
 $header_height_big: $header_height + $nav_height;
 
-// Breakpoints
+// Breakpoints.
 $container_width: 95rem;
 $xs: 0;
 $sm: 57rem;
