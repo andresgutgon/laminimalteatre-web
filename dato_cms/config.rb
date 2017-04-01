@@ -220,6 +220,7 @@ directory "src/_shows" do
             directed_by: directed_by,
             permalink: permalink,
             slug: play.slug,
+            position: play.position,
             title: play.title
         end
       end

@@ -4,7 +4,7 @@ layout: page
 {% include page_header.html title='main_menu.show' %}
 <div class="container">
   <ul class="show-list">
-    {% assign shows = site.shows | where: 'locale', page.language %}
+    {% assign shows = site.shows | where: 'locale', page.language  | sort: 'position' %}
     {% for show in shows %}
       <li class="show-list__item">
         <a href="{{ page | to_url: 'show', show.slug }}" class="show-list__item__content" title="{{show.title}}">
