@@ -2,7 +2,7 @@ title: 'La Minimal Teatre'
 email: 'info@laminimalteatre.com'
 description: '' 
 baseurl: "" 
-url: ""
+url: "https://laminimalteatre.netlify.com"
 timezone: Europe/Madrid
 
 source: './src'

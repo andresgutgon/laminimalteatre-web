@@ -1,5 +1,5 @@
-<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
 {% for permalink in page.permalinks %}
-  <link rel="alternate" hreflang="{{ permalink['locale'] }}" href="{{ site.url }}{{ site.baseurl }}/{{ permalink['url'] }}"/>
+  <link rel="alternate" hreflang="{{ site.url }}{{ permalink['locale'] }}" href="{{ site.url }}{{ site.baseurl }}/{{ permalink['url'] }}"/>
 {% endfor %}
