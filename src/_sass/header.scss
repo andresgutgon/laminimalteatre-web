@@ -1,5 +1,5 @@
 .header {
-  z-index: 1000;
+  z-index: $top_bar_zindex;
   position: fixed;
   top: 0;
   left: 0;
@@ -9,9 +9,25 @@
 
   &__content {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
+    @media only screen and (min-width: $sm) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__hamburger {
+    padding: 2rem;
+    border: 0;
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+    @media only screen and (min-width: $sm) {
+      display: none;
+    }
   }
 
 
