@@ -35,7 +35,7 @@ $zindex_play_button: 3;
     align-items: top;
     justify-content: center;
 
-    .content {
+    &__content {
       width: 100%;
       margin: 0 2rem;
       iframe {
