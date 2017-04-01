@@ -1,6 +1,7 @@
 ---
 layout: page
 ---
+{% include page_header.html title='main_menu.show' %}
 <div class="container">
   <ul class="show-list">
     {% assign shows = site.shows | where: 'locale', page.language %}
