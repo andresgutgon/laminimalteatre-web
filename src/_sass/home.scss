@@ -42,18 +42,6 @@
       top: 3rem;
     }
 
-    &:after {
-      font-size: 3em;
-      color: $brand;
-      content: close-quote;
-      display: inline;
-      height: 0;
-      line-height: 0;
-      left: 10px;
-      position: relative;
-      top: 35px;
-    }
-
     &__footer {
       @include font_size(1.5);
       color: rgba(white, .7);

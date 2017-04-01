@@ -12,3 +12,12 @@ $serif: 'Roboto Slab', serif;
 $nav_height: 3rem;
 $logo_height: 5rem;
 $header_height: $logo_height + $nav_height;
+
+// Breakpoints
+$container_width: 95rem;
+$xs: 0;
+$sm: 57rem;
+$md: 76.8rem;
+$lg: 10.2rem;
+$xl: $container_width;
+$xxl: 160rem;

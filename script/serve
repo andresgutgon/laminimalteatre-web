@@ -1,5 +1,7 @@
 #!/bin/sh
 
+## Do not fetch from DatoCMS
+## script/serve nofetch
 if [ "$1" != "nofetch" ]
 then
   echo '==> Fetching from DatoCMS'

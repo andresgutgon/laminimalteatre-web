@@ -11,11 +11,6 @@ MAIN_MENU  = {
     ca: 'espectacles',
     en: 'shows'
   },
-  courses: {
-    es: 'cursos',
-    ca: 'cursos',
-    en: 'courses'
-  },
   gallery: {
     es: 'galeria',
     ca: 'galeria',
@@ -42,6 +37,15 @@ PLAY_CAST = %w(
 
 def full_name(person)
   "#{person.name} #{person.surname}"
+end
+
+def play_directed_by(play)
+  play.direction_and_arts
+    .map do |person|
+      attr = person.attributes
+      "#{attr[:name]} #{attr[:surname]}"
+    end
+    .join(', ')
 end
 
 def play_cast(play)
@@ -107,6 +111,17 @@ def get_permalinks(record, field_name, locale)
     end
 end
 
+def get_permalinks_for_index(root, current_locale)
+  I18n.available_locales
+      .reject { |locale| locale == current_locale }
+      .map do |locale|
+        {
+          url: "#{locale.to_s}/#{menu_root(root, locale)}",
+          locale: locale.to_s
+        }
+      end
+end
+
 create_data_file('src/_data/menu.yml', :yaml, MAIN_MENU)
 
 # dato.available_locales.each do |locale|
@@ -160,21 +175,67 @@ directory "src/_members" do
   end
 end
 
-directory "src/shows" do
+directory "src/_shows" do
   I18n.available_locales.each do |locale|
     I18n.with_locale(locale) do
+      dato.plays.each do |play|
+        permalink = slug_url({ slug: play.slug, locale: locale })
+        directed_by = play_directed_by(play)
+        create_post "#{locale.to_s}_#{play.slug}.yaml" do
+          frontmatter :yaml,
+            locale: locale.to_s,
+            image: play.teaser.thumbnail_url,
+            directed_by: directed_by,
+            permalink: permalink,
+            slug: play.slug,
+            title: play.title
+        end
+      end
+    end
+  end
+end
+
+I18n.available_locales.each do |locale|
+  # Home
+  directory "src/home/#{locale.to_s}" do
+    I18n.with_locale(locale) do
+      create_post 'index.md' do
+        frontmatter(
+          :yaml,
+          layout: 'home',
+          language: locale.to_s,
+          image_url: dato.home.home_image.file.width(800).to_url,
+          intro_text: dato.home.intro_text,
+          subset: 'home',
+          permalink: "#{locale}/"
+        )
+      end
+    end
+  end
+
+  # Shows
+  directory "src/shows/#{locale.to_s}" do
+    I18n.with_locale(locale) do
+      # Shows list
+      permalinks = get_permalinks_for_index(:show, locale)
+      permalink = "#{locale}/#{menu_root(:show, locale)}/index.html"
+      create_post 'index.md' do
+        frontmatter(
+          :yaml,
+          layout: 'shows_list',
+          language: locale.to_s,
+          permalinks: permalinks,
+          permalink: permalink
+        )
+      end
+      # Show detail
       dato.plays.each do |play|
         actors = play_actors(play.actors)
         cast = play_cast(play)
         permalinks = get_permalinks(play, :slug, locale)
         permalink = slug_url_with_index({ slug: play.slug, locale: locale })
-        create_post "#{locale.to_s}_#{play.slug}.yaml" do
-          directed_by = play.direction_and_arts
-            .map do |person|
-              attr = person.attributes
-              "#{attr[:name]} #{attr[:surname]}"
-            end
-            .join(', ')
+        directed_by = play_directed_by(play)
+        create_post "#{play.slug}.yaml" do
           video_id = play.teaser.provider_uid
           teaser = {
             video_id: video_id,
@@ -211,26 +272,6 @@ directory "src/shows" do
               'assets/js/pages/show.js'
             ]
         end
-      end
-    end
-  end
-end
-
-I18n.available_locales.each do |locale|
-  # languages = I18n.available_locales.map { |l| l.to_s }
-
-  directory "src/home/#{locale.to_s}" do
-    I18n.with_locale(locale) do
-      create_post 'index.md' do
-        frontmatter(
-          :yaml,
-          layout: 'home',
-          language: locale.to_s,
-          image_url: dato.home.home_image.file.width(800).to_url,
-          intro_text: dato.home.intro_text,
-          subset: 'home',
-          permalink: "#{locale}/"
-        )
       end
     end
   end

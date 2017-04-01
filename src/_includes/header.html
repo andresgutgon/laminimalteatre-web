@@ -1,28 +1,26 @@
 <header class="header" role="banner">
   <div class="container">
     <div class="header__content">
+      {% assign root_url =  page | to_url: 'root' %}
       <div class="logo">
-        {% include logo.html %}
+        <a href="{{root_url}}">
+          {% include logo.html %}
+        </a>
       </div>
       <ul class="header__nav">
         <li>
-          <a class="js-scroll-header-item header__nav__item" href="{{ page | to_url: 'root', nil, 'story' }}">
+          <a class="js-scroll-header-item header__nav__item" href="{{ root_url }}#story">
             {% t 'main_menu.story' %}
           </a>
         </li>
         <li>
-          <a class="js-scroll-header-item header__nav__item" href="{{ page | to_url: 'root', nil, 'team' }}">
+          <a class="js-scroll-header-item header__nav__item" href="{{ page | to_url: 'root' }}#team">
             {% t 'main_menu.team' %}
           </a>
         </li>
         <li>
           <a class="header__nav__item" href="{{ page | to_url: 'show' }}">
             {% t 'main_menu.shows' %}
-          </a>
-        </li>
-        <li>
-          <a class="header__nav__item" href="{{ page | to_url: 'courses' }}">
-            {% t 'main_menu.courses' %}
           </a>
         </li>
         <li>

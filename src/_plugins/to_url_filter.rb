@@ -4,18 +4,28 @@ module Jekyll
     # @param [Hash] page
     # @param [String] base_path
     # @param [String] path
-    # @param [String] hash
-    def to_url(page, base_path, path = nil, hash = nil)
-      hash_string = hash ? "##{hash}" : ''
-      language = page['language']
+    # @param [String] localized
+    def to_url(page, base_path, path = nil)
       site = @context.registers[:site]
       domain_url = site.config['url']
+      localized_path = get_localized_path(page, base_path)
+      url = "#{domain_url}/#{localized_path}"
+
+      return url if path.nil?
+
+      "#{url}/#{path}"
+    end
+
+    private
+
+    def get_localized_path(page, base_path)
+      site = @context.registers[:site]
+      language = page['language']
       menu = site.data['menu']
-      url = "#{domain_url}/#{menu[base_path][language]}"
+      menu_path = menu[base_path][language]
 
-      return "#{url}#{hash_string}" if path.nil?
-
-      "#{url}/#{path}#{hash_string}"
+      return menu_path if base_path == 'root'
+      "#{language}/#{menu_path}"
     end
   end
 end

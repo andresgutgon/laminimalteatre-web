@@ -1,3 +1,19 @@
-{% for show in shows %}
-  {{ show.title }}
-{% endofor %}
+---
+layout: page
+---
+<div class="container">
+  <ul class="show-list">
+    {% assign shows = site.shows | where: 'locale', page.language %}
+    {% for show in shows %}
+      <li class="show-list__item">
+        <a href="{{ page | to_url: 'show', show.slug }}" class="show-list__item__content" title="{{show.title}}">
+          <img src="{{ show.image }}" alt="{{ show.title }}"/>
+          <div class="show-list__item__info">
+            <h3>{{ show.title }}</h3>
+            <h5><span>{% t 'common.directed_by' %}:</span> {{ show.directed_by }}</h5>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

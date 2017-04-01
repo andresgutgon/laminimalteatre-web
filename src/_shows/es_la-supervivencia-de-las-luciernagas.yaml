@@ -1,16 +1,9 @@
 ---
+locale: es
+image: https://i.vimeocdn.com/video/533408660_640.jpg
+directed_by: Daniela  De Vecchi, Núria  Vizcarro, Joan  Fortuny, Albert Pijuan
+permalink: es/espectaculos/la-supervivencia-de-las-luciernagas
+slug: la-supervivencia-de-las-luciernagas
 title: La supervivencia de las luciérnagas
-language: es
-galery:
-- image_url: https://dato-images.imgix.net/1035/1489343599-img_20140718_225446-jpg?ch=DPR%2CWidth&auto=format&w=800
-  image_thumbnail_url: https://dato-images.imgix.net/1035/1489343599-img_20140718_225446-jpg?ch=DPR%2CWidth&auto=format&w=220
-  title: 
-- image_url: https://dato-images.imgix.net/1035/1489343646-10408692_708555195885297_1357345228287273063_n-jpg?ch=DPR%2CWidth&auto=format&w=800
-  image_thumbnail_url: https://dato-images.imgix.net/1035/1489343646-10408692_708555195885297_1357345228287273063_n-jpg?ch=DPR%2CWidth&auto=format&w=220
-  title: 
-- image_url: https://dato-images.imgix.net/1035/1489343716-portada_hsf5-jpg?ch=DPR%2CWidth&auto=format&w=800
-  image_thumbnail_url: https://dato-images.imgix.net/1035/1489343716-portada_hsf5-jpg?ch=DPR%2CWidth&auto=format&w=220
-  title: 
-permalink: es/la-supervivencia-de-las-luciernagas
 ---
 
