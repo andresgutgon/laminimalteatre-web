@@ -9,7 +9,7 @@ DATO_API_TOKEN=look_for_this_key_on_datocms.com_admin_panel
 - [x] Better solution for hash page like story or team
 - [x] Responsive menu
 - [x] Page footer
-- [ ] Language selector
+- [x] Language selector
 - [ ] Blog
 - [ ] Favicon
 - [ ] Not found page
