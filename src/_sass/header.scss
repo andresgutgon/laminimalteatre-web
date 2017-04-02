@@ -49,6 +49,8 @@
       padding: 0 1rem;
       text-decoration: none;
       position: relative;
+      border: 0;
+      background: transparent;
       &:after {
         display: none;
         background-color: $grey1;
@@ -58,6 +60,31 @@
         right: 0;
         bottom: -.1rem;
         height: .2rem;
+      }
+
+      &.language-button {
+        &:hover {
+          &:after {
+            background: transparent;
+          }
+        }
+      }
+      &.language-button ~ .popover {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px;
+        background: $brand;
+        border: 0;
+        margin-top: 0;
+        border-radius: 0 0 4px 4px;
+        .popover-content {
+          padding-top: 0;
+        }
+        .arrow {
+          display: none;
+        }
+      }
+
+      &:focus {
+        outline: none;
       }
 
       &:hover {

@@ -22,6 +22,12 @@
     @include font_size(1.6);
     margin-bottom: 2rem;
     display: block;
+    background: transparent;
+    border: 0;
+
+    &:focus {
+      outline: none;
+    }
 
     &--active {
       font-weight: 700;
@@ -30,7 +36,7 @@
 
   &__separator {
     height: 1px;
-    background-color: white;
+    background-color: $grey2;
     opacity: .6;
     width: 3rem;
     margin-top: 2rem;

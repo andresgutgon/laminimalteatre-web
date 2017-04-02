@@ -9,6 +9,11 @@ intro_text: |-
   La temporada 12/13 termina con el estreno de tres nuevos espectáculos de LAminimAL en Barcelona: en marzo estrena “Hacer que suene una flor…a pesar de todo: el suicidio del elefante hipotecado” con textos breves de José Sanchis Sinisterra, espectáculo que inaugura el nuevo espacio Àtic22 del Teatre Tantarantana con un gran éxito de público y crítica. En mayo, en la Sala Beckett estrena “Miércoles”, de Aina Tur, muy bien acogido por el público también. Y cerrando la temporada con otro éxito de taquilla con el estreno de “La Grandeza de ser uno entre tantos”, en la Sala Atrium dentro del ciclo Atrium LAB.
 
   Para la temporada 13/14, se prepara el estreno de la nueva entrega de “Hacer que suene una flor… A pesar de todo: la supervivencia de las luciérnagas”. El proyecto, que se podrá ver en Fira Tàrrega 2014 del 11 al 14 de Septiembre, ha sido seleccionado para formar parte del programa de Apoyo a la Creación. Está presente, dentro del ciclo IT Emergents, en el festival Grec de Barcelona y en el Festival Temporada Alta de Girona. También se presenta en Madrid, en el Festival Fringe 2014.
+permalinks:
+- url: ca/la-nostra-historia
+  locale: ca
+- url: en/our-story
+  locale: en
 permalink: es/nuestra-historia/index.html
 ---
 

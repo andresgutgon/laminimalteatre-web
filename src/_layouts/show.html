@@ -51,23 +51,6 @@ layout: page
   </div>
 </div>
 
-<!-- Play gallery -->
-{% if page.gallery.size %}
-  <div class="container">
-    <div id="playGallery" class="playGallery">
-      {% for image in page.gallery %}
-        <a
-          class="playGallery__item"
-          href="{{ image.url}}"
-          title="{{ image.title }}"
-          data-gallery
-          style="background-image: url({{ image.thumbnail_url }});"
-        ></a>
-      {% endfor %}
-    </div>
-  </div>
-{% endif %}
-
 <!-- Play info -->
 <div class="playInfo">
   <div class="container playInfo__container">
@@ -89,3 +72,19 @@ layout: page
   </div>
 </div>
 
+<!-- Play gallery -->
+{% if page.gallery.size %}
+  <div class="container">
+    <div id="playGallery" class="playGallery">
+      {% for image in page.gallery %}
+        <a
+          class="playGallery__item"
+          href="{{ image.url}}"
+          title="{{ image.title }}"
+          data-gallery
+          style="background-image: url({{ image.thumbnail_url }});"
+        ></a>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

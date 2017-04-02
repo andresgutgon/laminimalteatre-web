@@ -19,8 +19,12 @@
               </a>
             </li>
           {%  endfor %}
+          <li>
+            {% include language-button.html class='site-footer__menu__link' placement='top' %}
+          </li>
         </ul>
       </div>
     </div>
   </div>
+  {% include language-menu.html %}
 </footer>

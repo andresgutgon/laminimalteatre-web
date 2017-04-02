@@ -9,6 +9,11 @@ intro_text: |-
   La temporada 12/13 acaba amb l’estrena de tres nous espectacles de LAminimAL a Barcelona: el març “Fer sonar una flor…malgrat tot: el suïcidi de l’elefant hipotecat” amb textos breus de José Sanchis Sinisterra, espectacle que inaugura el nou espai Àtic22 del Teatre Tantarantana amb un gran èxit de públic i crítica; el maig, a la Sala Beckett, estrena “Dimecres” d’Aina Tur, que també rep una bona acollida del públic; i, finalment, com a tancament de temporada, el juny, un altre èxit de taquillatge amb l’estrena de “La Grandesa d’ésser un entre tants” a la Sala Atrium dins del cicle Atrium LAB.
 
   Per a la temporada 13/14 es preparen les estrenes de la nova entrega de “La supervivència de les Lluernes” coproduït per el Festival Grec, la Fira Tàrrega i el Festival Temporada Alta.
+permalinks:
+- url: es/nuestra-historia
+  locale: es
+- url: en/our-story
+  locale: en
 permalink: ca/la-nostra-historia/index.html
 ---
 

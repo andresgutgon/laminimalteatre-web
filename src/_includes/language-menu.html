@@ -1,0 +1,14 @@
+<div class="js-language-menu languages-menu">
+  <ul>
+    {% assign languages = page | language_urls %}
+    {% for language in languages %}
+      <li>
+        <a class="site-footer__menu__link" href="{{ site.url }}/{{ language['url'] }}">
+          {% assign language_key = 'lang.' | append: language['locale'] %}
+          {% t language_key %}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+

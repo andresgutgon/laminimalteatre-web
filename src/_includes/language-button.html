@@ -1,0 +1,5 @@
+<button class="js-language language-button {{include.class}}" data-toggle="popover" data-placement="{{include.placement}}" role="button">
+  {% assign language_key = 'lang.' | append: page.language %}
+  {% t language_key %}
+  {% include icons/sort-down.html %}
+</button>

@@ -116,7 +116,7 @@ def get_permalinks(record, field_name, locale)
     .map do |slug|
       {
         url: slug_url(slug),
-        locale: slug[:locale].to_s
+        locale: slug[:locale].to_s,
       }
     end
 end
@@ -127,7 +127,7 @@ def get_permalinks_for_index(root, current_locale)
       .map do |locale|
         {
           url: "#{locale.to_s}/#{menu_root(root, locale)}",
-          locale: locale.to_s
+          locale: locale.to_s,
         }
       end
 end
@@ -249,12 +249,14 @@ I18n.available_locales.each do |locale|
   # Team
   directory "src/team/#{locale.to_s}" do
     I18n.with_locale(locale) do
+      permalinks = get_permalinks_for_index(:team, locale)
       slug = menu_root(:team, locale)
       create_post 'index.md' do
         frontmatter(
           :yaml,
           layout: 'team',
           language: locale.to_s,
+          permalinks: permalinks,
           permalink: "#{locale}/#{slug}/index.html"
         )
       end
@@ -265,12 +267,14 @@ I18n.available_locales.each do |locale|
   directory "src/story/#{locale.to_s}" do
     I18n.with_locale(locale) do
       slug = menu_root(:story, locale)
+      permalinks = get_permalinks_for_index(:story, locale)
       create_post 'index.md' do
         frontmatter(
           :yaml,
           layout: 'story',
           language: locale.to_s,
           intro_text: dato.home.intro_text,
+          permalinks: permalinks,
           permalink: "#{locale}/#{slug}/index.html"
         )
       end
