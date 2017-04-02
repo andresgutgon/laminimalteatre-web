@@ -1,5 +1,6 @@
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-{% for permalink in page.permalinks %}
-  <link rel="alternate" hreflang="{{ permalink['locale'] }}" href="{{ site.url }}/{{ permalink['url'] }}"/>
+{% assign languages = page | language_urls %}
+{% for language in languages %}
+  <link rel="alternate" hreflang="{{ language['locale'] }}" href="{{ site.url }}/{{ language['url'] }}"/>
 {% endfor %}
