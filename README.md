@@ -11,9 +11,10 @@ DATO_API_TOKEN=look_for_this_key_on_datocms.com_admin_panel
 - [x] Page footer
 - [x] Language selector
 - [ ] Blog
+- [ ] Home with fotaza
 - [ ] Favicon
 - [ ] Not found page
 - [ ] Sincronize background video and modal video teasers on shows
 - [ ] Add written by in shows
-- [ ] Responsive home
+- [ ] Photo Gallery
 
