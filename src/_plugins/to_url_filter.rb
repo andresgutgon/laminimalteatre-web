@@ -19,6 +19,8 @@ module Jekyll
     private
 
     def get_localized_path(page, base_path)
+      return base_path if base_path == 'blog'
+
       site = @context.registers[:site]
       language = page['language']
       menu = site.data['menu']
