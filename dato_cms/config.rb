@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 require 'byebug'
+require 'readingtime'
 
 MAIN_MENU  = {
   root: {
@@ -45,6 +47,29 @@ PLAY_CAST = %w(
   assistant_director
 ).freeze
 
+def format_approx(seconds)
+  if seconds > 59
+    '%d minutos' % (seconds.to_f/60).round
+  else
+    '%d segundos' % seconds
+  end
+end
+
+def raw_text(content)
+  re = /<("[^"]*"|'[^']*'|[^'">])*>/
+  content.gsub!(re, '')
+end
+
+def truncate_words(text, length = 20, end_string = ' ...')
+  words = text.split
+  words[0..(length-1)].join(' ') + (words.length > length ? end_string : '')
+end
+
+def reading_time(text)
+  time = text.reading_time format: :raw # Raw output [hours, minutes, seconds]
+  format_approx(time[2])
+end
+
 def full_name(person)
   "#{person.name} #{person.surname}"
 end
@@ -76,13 +101,13 @@ end
 
 def play_actors(actors)
   actors
-  .sort! { |x, y| x.name <=> y.name }
-  .map do |actor|
-    {
-      name: full_name(actor),
-      avatar_url: actor.avatar.file.width(100).to_url
-    }
-  end
+    .sort! { |x, y| x.name <=> y.name }
+    .map do |actor|
+      {
+        name: full_name(actor),
+        avatar_url: actor.avatar.file.width(100).to_url
+      }
+    end
 end
 
 def menu_root(item, locale)
@@ -156,18 +181,6 @@ create_data_file('src/_data/menu_items.yml',
     end
 )
 
-# dato.available_locales.each do |locale|
-#   directory 'content/#{locale}' do
-#     I18n.with_locale(locale) do
-#       create_data_file 'site.yml', :yaml, dato.site.to_hash
-#       dato.item_types.each do |item_type|
-#         create_data_file '#{item_type.api_key}.yml', :yaml, 
-#                          dato.items_of_type(item_type).map(&:to_hash)
-#       end
-#     end
-#   end
-# end
-
 directory "src/_teams" do
   I18n.available_locales.each do |locale|
     I18n.with_locale(locale) do
@@ -224,6 +237,44 @@ directory "src/_shows" do
             title: play.title
         end
       end
+    end
+  end
+end
+
+directory "src/blog" do
+  create_post 'index.md' do
+    frontmatter(
+      :yaml,
+      layout: 'blog',
+      language: 'es',
+      permalink: 'blog/'
+    )
+  end
+end
+
+directory "src/_posts" do
+  dato.articles.each do |article|
+    date = article.publication_date
+    date_parts = [date.year, date.month, date.day]
+    permalink = "blog/#{date_parts.join('/')}/#{article.slug}"
+    text = article.content.to_hash.detect {|item| item[:item_type] == 'article_block_text' }[:text]
+    raw = raw_text(text)
+    intro = truncate_words(raw)
+    time_to_read = reading_time(raw)
+    create_post "#{date_parts.join('-')}-#{article.slug}.md" do
+      frontmatter :yaml,
+                  locale: 'es',
+                  language: 'es',
+                  layout: 'post',
+                  thumbnail: article.post_image.file.width(300).to_url,
+                  author_avatar: article.author.avatar.file.width(150).to_url,
+                  author_name: "#{article.author.name} #{article.author.surname}",
+                  date: article.publication_date,
+                  intro: intro,
+                  reading_time: time_to_read,
+                  lol: "#{permalink}/",
+                  permalink: permalink,
+                  title: article.title
     end
   end
 end

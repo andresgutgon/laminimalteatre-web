@@ -1,6 +1,6 @@
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-{% assign languages = page | language_urls %}
+{% assign languages = page | canonical_urls %}
 {% for language in languages %}
   <link rel="alternate" hreflang="{{ language['locale'] }}" href="{{ site.url }}/{{ language['url'] }}"/>
 {% endfor %}
