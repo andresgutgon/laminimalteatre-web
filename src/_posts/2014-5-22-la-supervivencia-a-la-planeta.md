@@ -1,6 +1,6 @@
 ---
-locale: es
-language: es
+locale: en
+language: en
 layout: post
 thumbnail: https://www.datocms-assets.com/1035/1494152952-grandesa-jpg?ch=DPR%2CWidth&auto=format&w=300
 author_avatar: https://www.datocms-assets.com/1035/1488136411-daniela-jpeg?ch=DPR%2CWidth&auto=format&w=150

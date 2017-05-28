@@ -1,4 +1,47 @@
 ---
+date:
+  abbr_daynames:
+  - Sun
+  - Mon
+  - Tue
+  - Wed
+  - Thu
+  - Fri
+  - Sat
+  abbr_monthnames:
+  - Jan
+  - Feb
+  - Mar
+  - Apr
+  - May
+  - Jun
+  - Jul
+  - Aug
+  - Sep
+  - Oct
+  - Nov
+  - Dec
+  daynames:
+  - Sunday
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday
+  - Saturday
+  monthnames:
+  - January
+  - February
+  - March
+  - April
+  - May
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
+  - December
 lang:
   es: spanish
   ca: catalan
@@ -29,3 +72,5 @@ play:
   makeup: Maquillaje
   lighting: Light design
   costum_design: Costum design
+post:
+  list_date_format: '%Y %B '

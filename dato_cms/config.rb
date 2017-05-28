@@ -263,8 +263,8 @@ directory "src/_posts" do
     time_to_read = reading_time(raw)
     create_post "#{date_parts.join('-')}-#{article.slug}.md" do
       frontmatter :yaml,
-                  locale: 'es',
-                  language: 'es',
+                  locale: 'en',
+                  language: 'en',
                   layout: 'post',
                   thumbnail: article.post_image.file.width(300).to_url,
                   author_avatar: article.author.avatar.file.width(150).to_url,

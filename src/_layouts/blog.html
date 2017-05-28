@@ -1,21 +1,34 @@
 ---
 layout: page
 ---
-<section class='blog'>
-    <ul class='list'>
-      {% for post in site.posts %}
-        <li>
-          <time class='time'>
-            {% assign date_format = default: '%b %-d, %Y' %}
-            {{ post.date | date: date_format }}
-          </time>
-          <h2>
-            <a class='link' href='{{ post.url | relative_url }}' role='link'>{{ post.title }}</a>
-          </h2>
-          <p class='meta'>
-            {{ post.intro }}
-          </p>
-        </li>
-      {% endfor %}
-    </ul>
+{% include page_header.html title='main_menu.blog' %}
+
+{% assign posts = site.posts | sort: 'date' | reverse %}
+
+<section class='container blog'>
+  <ul class='posts'>
+    {% for post in posts %}
+      <li class='post'>
+        <h2>
+          <a class='link' href='{{ post.url | relative_url }}' role='link'>{{ post.title }}</a>
+        </h2>
+        <p>{{ post.intro }}</p>
+        <div class='post__meta'>
+          <div class='post__author__avatar'>
+            <img src='{{ post.author_avatar }}' alt='{{ post.author_name }}' width="40" height="40" />
+          </div>
+          <div class="post__meta-info">
+            <h3 class="post__author__name">{{ post.author_name }}</h3>
+            <div class="post__meta__text">
+              <time datetime="{{ post.date }}">
+                {{ post.date | tdate: 'post.list_date_format' | capilalize }}
+              </time>
+              &middot;
+              <span>{{ post.reading_time }}</span>
+            </div>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
 </section>

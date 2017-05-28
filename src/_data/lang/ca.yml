@@ -1,4 +1,48 @@
 ---
+ca:
+  date:
+    abbr_daynames:
+    - Dg
+    - Dl
+    - Dm
+    - Dc
+    - Dj
+    - Dv
+    - Ds
+    abbr_monthnames:
+    - Gen
+    - Feb
+    - Mar
+    - Abr
+    - Mai
+    - Jun
+    - Jul
+    - Ago
+    - Set
+    - Oct
+    - Nov
+    - Des
+    daynames:
+    - Diumenge
+    - Dilluns
+    - Dimarts
+    - Dimecres
+    - Dijous
+    - Divendres
+    - Dissabte
+    monthnames:
+    - Gener
+    - Febrer
+    - Març
+    - Abril
+    - Maig
+    - Juny
+    - Juliol
+    - Agost
+    - Setembre
+    - Octubre
+    - Novembre
+    - Desembre
 lang:
   es: espanyol
   ca: català 
@@ -28,3 +72,5 @@ play:
   makeup: Maquillaje
   lighting: il·luminació
   costum_design: Vestuari
+post:
+  list_date_format: '%B %Y'
