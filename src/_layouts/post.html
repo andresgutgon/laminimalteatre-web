@@ -2,4 +2,53 @@
 layout: page
 ---
 
-HOLA
+{% assign narrowContainer = '' %}
+{% if page.event == nil %}
+  {% assign narrowContainer = 'post-detail__narrowContainer' %}
+{% endif %}
+
+<section class='post-detail'>
+  <div class="post-detail__header">
+    <div class="post-detail__header__image" style="background-image: url({{ page.image }})"></div>
+    <div class="post-detail__header__content">
+      <div class="container {{ narrowContainer }}">
+        <div class="post-detail__header__content-inner">
+          <h1 class="post-detail__header__title">{{page.title}}</h1>
+          <div class="post-detail__header__meta">
+            <div class='post-detail__header__meta__author__avatar'>
+              <img src='{{ page.author_avatar }}' alt='{{ post.author_name }}' width="40" height="40" />
+            </div>
+            <div>
+              <h3 class="post-detail__header__meta__author__name">{{ page.author_name }}</h3>
+              <div class="post-detail__header__meta__text">
+                <time datetime="{{ post.date }}">
+                  {{ page.date | tdate: 'post.list_date_format' | capilalize }}
+                </time>
+                &middot;
+                <span>{{ page.reading_time }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container post-detail__content {{ narrowContainer }}">
+    <div class="post-detail__text">
+      {% for item in page.content_blocks %}
+        {% if item.type == 'text' %}
+          {% include post/content_blocks/text.html item=item %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if page.event != nil %}
+      <div class="post-detail__sidebar">
+        {% include post/content_blocks/event.html event=page.event %}
+      </div>
+    {% endif %}
+
+  </div>
+
+</section>

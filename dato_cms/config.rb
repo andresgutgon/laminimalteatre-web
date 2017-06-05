@@ -49,9 +49,9 @@ PLAY_CAST = %w(
 
 def format_approx(seconds)
   if seconds > 59
-    '%d minutos' % (seconds.to_f/60).round
+    '%d minutos de lectura' % (seconds.to_f/60).round
   else
-    '%d segundos' % seconds
+    '%d segundos de lectura' % seconds
   end
 end
 
@@ -116,6 +116,36 @@ end
 
 def slug_url(slug:, locale:)
   "#{locale.to_s}/#{menu_root(:show, locale)}/#{slug}"
+end
+
+def article_event(article)
+  event = article.content.to_hash.detect do |item|
+    item[:item_type] == 'event'
+  end
+  return nil unless event
+  byebug
+  {
+    place_name: event[:place_name],
+    address: event[:address],
+    play: {
+      name: event[:play][:title],
+      url: slug_url(slug: event[:play][:slug], locale: :es)
+    }
+  }
+end
+
+def article_content(content)
+  content.to_hash.map do |item|
+    case item[:item_type]
+    when 'article_block_text'
+      {
+        type: 'text',
+        content: item[:text]
+      }
+    else
+      nil
+    end
+  end.compact
 end
 
 def slug_url_with_index(slug)
@@ -258,22 +288,25 @@ directory "src/_posts" do
     date_parts = [date.year, date.month, date.day]
     permalink = "blog/#{date_parts.join('/')}/#{article.slug}"
     text = article.content.to_hash.detect {|item| item[:item_type] == 'article_block_text' }[:text]
-    raw = raw_text(text)
-    intro = truncate_words(raw)
-    time_to_read = reading_time(raw)
+    event = article_event(article)
+    intro = truncate_words(text)
+    content = article_content(article.content)
+    time_to_read = reading_time(text)
     create_post "#{date_parts.join('-')}-#{article.slug}.md" do
       frontmatter :yaml,
-                  locale: 'en',
-                  language: 'en',
+                  locale: 'es',
+                  language: 'es',
                   layout: 'post',
                   thumbnail: article.post_image.file.width(300).to_url,
+                  image: article.post_image.file.width(800).to_url,
                   author_avatar: article.author.avatar.file.width(150).to_url,
                   author_name: "#{article.author.name} #{article.author.surname}",
                   date: article.publication_date,
                   intro: intro,
                   reading_time: time_to_read,
-                  lol: "#{permalink}/",
                   permalink: permalink,
+                  event: event,
+                  content_blocks: content,
                   title: article.title
     end
   end
