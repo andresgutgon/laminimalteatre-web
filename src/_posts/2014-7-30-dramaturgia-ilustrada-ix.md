@@ -11,7 +11,6 @@ intro: Dramaturgia Ilustrada es un proyecto del artista gr&aacute;fico Carlos Mu
   donde presenta una relectura de fragmentos de las obras de ...
 reading_time: 44 segundos de lectura
 permalink: blog/2014/7/30/dramaturgia-ilustrada-ix
-event: 
 content_blocks:
 - type: text
   content: |-

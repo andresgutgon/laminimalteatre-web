@@ -1,3 +1,5 @@
 <div class="post-detail__event">
-  {{ include.event.place_name }}
+  {{ item.place_name }}
+  {{ item.play.name }}
+  <img src="{{ item.play.image }}" alt="{{ item.play.name }}" />
 </div>

@@ -118,22 +118,6 @@ def slug_url(slug:, locale:)
   "#{locale.to_s}/#{menu_root(:show, locale)}/#{slug}"
 end
 
-def article_event(article)
-  event = article.content.to_hash.detect do |item|
-    item[:item_type] == 'event'
-  end
-  return nil unless event
-  byebug
-  {
-    place_name: event[:place_name],
-    address: event[:address],
-    play: {
-      name: event[:play][:title],
-      url: slug_url(slug: event[:play][:slug], locale: :es)
-    }
-  }
-end
-
 def article_content(content)
   content.to_hash.map do |item|
     case item[:item_type]
@@ -142,8 +126,17 @@ def article_content(content)
         type: 'text',
         content: item[:text]
       }
-    else
-      nil
+    when 'event'
+      {
+        type: 'event',
+        place_name: item[:place_name],
+        address: item[:address],
+        play: {
+          name: item[:play][:title],
+          url: slug_url(slug: item[:play][:slug], locale: :es),
+          image: item[:play][:teaser][:thumbnail_url]
+        }
+      }
     end
   end.compact
 end
@@ -288,7 +281,6 @@ directory "src/_posts" do
     date_parts = [date.year, date.month, date.day]
     permalink = "blog/#{date_parts.join('/')}/#{article.slug}"
     text = article.content.to_hash.detect {|item| item[:item_type] == 'article_block_text' }[:text]
-    event = article_event(article)
     intro = truncate_words(text)
     content = article_content(article.content)
     time_to_read = reading_time(text)
@@ -305,7 +297,6 @@ directory "src/_posts" do
                   intro: intro,
                   reading_time: time_to_read,
                   permalink: permalink,
-                  event: event,
                   content_blocks: content,
                   title: article.title
     end

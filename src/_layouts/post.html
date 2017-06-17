@@ -2,10 +2,7 @@
 layout: page
 ---
 
-{% assign narrowContainer = '' %}
-{% if page.event == nil %}
-  {% assign narrowContainer = 'post-detail__narrowContainer' %}
-{% endif %}
+{% assign narrowContainer = 'post-detail__narrowContainer' %}
 
 <section class='post-detail'>
   <div class="post-detail__header">
@@ -37,18 +34,14 @@ layout: page
   <div class="container post-detail__content {{ narrowContainer }}">
     <div class="post-detail__text">
       {% for item in page.content_blocks %}
-        {% if item.type == 'text' %}
-          {% include post/content_blocks/text.html item=item %}
-        {% endif %}
+        {% case item.type %}
+          {% when 'text' %}
+            {% include post/content_blocks/text.html item=item %}
+          {% when 'event' %}
+            {% include post/content_blocks/event.html item=item %}
+        {% endcase %}
       {% endfor %}
     </div>
-
-    {% if page.event != nil %}
-      <div class="post-detail__sidebar">
-        {% include post/content_blocks/event.html event=page.event %}
-      </div>
-    {% endif %}
-
   </div>
 
 </section>

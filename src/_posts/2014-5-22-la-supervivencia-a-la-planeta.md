@@ -11,7 +11,13 @@ intro: La **Grandeza** de ser uno entre tantos es un texto in&eacute;dito del dr
   mexicano David Eudave, especialmente creado para trabajar ...
 reading_time: 4 segundos de lectura
 permalink: blog/2014/5/22/la-supervivencia-a-la-planeta
-event:
+content_blocks:
+- type: text
+  content: |-
+    La **Grandeza** de ser uno entre tantos es un texto in&eacute;dito del dramaturgo mexicano David Eudave, especialmente creado para trabajar con los Sistemas Minimalistas Repetitivos. La trama gira en torno a tres historias que enfocan diversos &aacute;mbitos de un tema muy humano: la coacci&oacute;n. Tres experiencias de interacci&oacute;n vividas por un grupo muy heterog&eacute;neo de hombres y mujeres que intentan afrontar, como pueden, las dificultades dentro del sistema que los rodea.
+
+    En escena actores, directora y equipo t&eacute;cnico construyen el espect&aacute;culo en cada funci&oacute;n. Cada escena posee dos posibilidades de continuidad, que la directora elegir&aacute; en directo y de acuerdo con las variaciones propuestas por los actores. El orden de las escenas se cambia cada representaci&oacute;n, todo se hace en directo. Desde la banda sonora tocada y cantada en escena hasta la iluminaci&oacute;n, todo puede variar y tomar protagonismo en cualquier momento. Los conflictos de los personajes se mezclan con los de los actores jugando en la frontera entre la realidad y la ficci&oacute;n, entre el representante y el representado.
+- type: event
   place_name: Sala La Planeta
   address:
     latitude: 41.9869732
@@ -19,12 +25,7 @@ event:
   play:
     name: La supervivencia de las luciérnagas
     url: es/espectaculos/la-supervivencia-de-las-luciernagas
-content_blocks:
-- type: text
-  content: |-
-    La **Grandeza** de ser uno entre tantos es un texto in&eacute;dito del dramaturgo mexicano David Eudave, especialmente creado para trabajar con los Sistemas Minimalistas Repetitivos. La trama gira en torno a tres historias que enfocan diversos &aacute;mbitos de un tema muy humano: la coacci&oacute;n. Tres experiencias de interacci&oacute;n vividas por un grupo muy heterog&eacute;neo de hombres y mujeres que intentan afrontar, como pueden, las dificultades dentro del sistema que los rodea.
-
-    En escena actores, directora y equipo t&eacute;cnico construyen el espect&aacute;culo en cada funci&oacute;n. Cada escena posee dos posibilidades de continuidad, que la directora elegir&aacute; en directo y de acuerdo con las variaciones propuestas por los actores. El orden de las escenas se cambia cada representaci&oacute;n, todo se hace en directo. Desde la banda sonora tocada y cantada en escena hasta la iluminaci&oacute;n, todo puede variar y tomar protagonismo en cualquier momento. Los conflictos de los personajes se mezclan con los de los actores jugando en la frontera entre la realidad y la ficci&oacute;n, entre el representante y el representado.
+    image: https://i.vimeocdn.com/video/533408660_640.jpg
 - type: text
   content: La Grandeza de ser uno entre tantos es en s&iacute; mismo una propuesta
     de convivencia que contagia al espectador en un ejercicio conjunto de teatro,
