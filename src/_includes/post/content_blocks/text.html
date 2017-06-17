@@ -1,1 +1,5 @@
-{{ item.content | markdownify }}
+<div class="container post-detail__content {{ narrowContainer }}">
+  <div class="post-detail__text">
+    {{ item.content | markdownify }}
+  </div>
+</div>

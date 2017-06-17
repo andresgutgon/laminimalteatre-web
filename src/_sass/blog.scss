@@ -162,12 +162,35 @@ $post_height: 35rem;
     }
   }
 
-  &__sidebar {
-    min-width: 30rem;
-  }
-
   &__event {
-    order: 0;
+    display: flex;
+    margin: 0 0 2rem 0;
+    &-image {
+      width: 20rem;
+      height: 100%;
+      border-radius: .4rem;
+      margin-right: 1rem;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h6 {
+        @include font-size(1);
+        color: $grey3;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0 0 .1rem 0;
+      }
+      h3 {
+        margin: 0;
+      }
+      a, a:hover {
+        @include font-size(1);
+        text-decoration: underline;
+      }
+    }
+
     &-map {
       height: 350px;
     }

@@ -31,17 +31,13 @@ layout: page
     </div>
   </div>
 
-  <div class="container post-detail__content {{ narrowContainer }}">
-    <div class="post-detail__text">
-      {% for item in page.content_blocks %}
-        {% case item.type %}
-          {% when 'text' %}
-            {% include post/content_blocks/text.html item=item %}
-          {% when 'event' %}
-            {% include post/content_blocks/event.html item=item %}
-        {% endcase %}
-      {% endfor %}
-    </div>
-  </div>
+  {% for item in page.content_blocks %}
+    {% case item.type %}
+      {% when 'text' %}
+        {% include post/content_blocks/text.html item=item %}
+      {% when 'event' %}
+        {% include post/content_blocks/event.html item=item %}
+    {% endcase %}
+  {% endfor %}
 
 </section>

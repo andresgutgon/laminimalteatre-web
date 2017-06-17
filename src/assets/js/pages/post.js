@@ -22,6 +22,7 @@ function initMap() {
   var noBussinesLayer = [{ featureType: 'poi', stylers: [ { visibility: 'off' } ] }];
   var map = new google.maps.Map(document.getElementById('js-map'), {
     zoom: 19,
+    scrollwheel: false,
     center: coordinates,
     styles: noBussinesLayer,
     mapTypeControlOptions: {
@@ -34,10 +35,15 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder;
   getAddress(geocoder, coordinates, function (address) {
+    var iconImage = {
+      url: '/assets/img/mapPin.png',
+      scaledSize: new google.maps.Size(32, 49),
+      anchor: new google.maps.Point(16, 49)
+    };
     var marker = new google.maps.Marker({
       map: map,
       position: coordinates,
-      icon: '/assets/img/mapPin.png',
+      icon: iconImage,
       animation: google.maps.Animation.DROP
     });
 

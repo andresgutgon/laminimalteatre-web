@@ -1,7 +1,14 @@
-<div class="post-detail__event">
-  {{ item.place_name }}
-  {{ item.play.name }}
-  <img src="{{ item.play.image }}" alt="{{ item.play.name }}" />
+<div class="post-detail__event-wrapper">
+  <div class="container post-detail__content {{ narrowContainer }}">
+    <div class="post-detail__event">
+      <img class="post-detail__event-image" src="{{ item.play.image }}" alt="{{ item.play.name }}" />
+      <div class="post-detail__event-content">
+        <h6>La obra</h6>
+        <h3>{{ item.play.name }}</h3>
+        <a href="{{ site.url }}/{{ item.play.url }}" target="_blank">Más informacion</a>
+      </div>
+    </div>
+  </div>
   {% if item.address %}
     <div id="js-map" class="post-detail__event-map"></div>
     <script>
