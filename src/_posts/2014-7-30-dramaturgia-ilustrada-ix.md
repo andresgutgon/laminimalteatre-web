@@ -29,5 +29,9 @@ content_blocks:
     ##### Dins de:
     La Supervivencia de la Luci&eacute;rnagas
 title: Dramaturgia ilustrada IX
+externalJsFiles:
+- https://maps.googleapis.com/maps/api/js?key=AIzaSyCuu7eRm9tL97D2QlPNGm0XS6HlfjUqSW4&callback=initMap
+jsFiles:
+- assets/js/pages/post.js
 ---
 

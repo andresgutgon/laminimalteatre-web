@@ -168,7 +168,11 @@ $post_height: 35rem;
 
   &__event {
     order: 0;
+    &-map {
+      height: 350px;
+    }
   }
+
 
   &__narrowContainer {
     max-width: 75rem;

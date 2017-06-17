@@ -2,6 +2,7 @@
 require 'byebug'
 require 'readingtime'
 
+GOOGLE_MAPS_API_KEY = 'AIzaSyCuu7eRm9tL97D2QlPNGm0XS6HlfjUqSW4'
 MAIN_MENU  = {
   root: {
     es: 'es',
@@ -46,6 +47,10 @@ PLAY_CAST = %w(
   costum_design
   assistant_director
 ).freeze
+
+def google_maps_url
+  "https://maps.googleapis.com/maps/api/js?key=#{GOOGLE_MAPS_API_KEY}&callback=initMap"
+end
 
 def format_approx(seconds)
   if seconds > 59
@@ -284,6 +289,7 @@ directory "src/_posts" do
     intro = truncate_words(text)
     content = article_content(article.content)
     time_to_read = reading_time(text)
+    externalJsFiles = [google_maps_url]
     create_post "#{date_parts.join('-')}-#{article.slug}.md" do
       frontmatter :yaml,
                   locale: 'es',
@@ -298,7 +304,9 @@ directory "src/_posts" do
                   reading_time: time_to_read,
                   permalink: permalink,
                   content_blocks: content,
-                  title: article.title
+                  title: article.title,
+                  externalJsFiles: externalJsFiles,
+                  jsFiles: ['assets/js/pages/post.js']
     end
   end
 end

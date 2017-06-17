@@ -32,5 +32,9 @@ content_blocks:
     que invita a formar constelaciones uniendo las tres historias presentes en la
     obra ya poner sentido all&iacute; donde se necesita.
 title: La Supervivencia a La Planeta
+externalJsFiles:
+- https://maps.googleapis.com/maps/api/js?key=AIzaSyCuu7eRm9tL97D2QlPNGm0XS6HlfjUqSW4&callback=initMap
+jsFiles:
+- assets/js/pages/post.js
 ---
 

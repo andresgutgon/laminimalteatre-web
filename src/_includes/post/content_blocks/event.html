@@ -2,4 +2,13 @@
   {{ item.place_name }}
   {{ item.play.name }}
   <img src="{{ item.play.image }}" alt="{{ item.play.name }}" />
+  {% if item.address %}
+    <div id="js-map" class="post-detail__event-map"></div>
+    <script>
+     var coordinates = {
+       lat: {{ item.address.latitude }},
+       lng: {{ item.address.longitude }}
+     };
+    </script>
+  {% endif %}
 </div>
